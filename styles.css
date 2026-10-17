@@ -948,6 +948,51 @@ html:lang(zh) .prose .flowchart .flow-title {
   line-height: 1.8;
   margin-top: 1rem;
 }
+/* Home-page pointer to the standalone essay. */
+.feature-essay {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: baseline;
+  gap: 8px 28px;
+  margin-top: 28px;
+  padding-block: 22px;
+  border-bottom: 1px solid var(--ink);
+}
+.feature-essay .eyebrow {
+  grid-column: 1 / -1;
+  color: var(--irrelevance);
+}
+.feature-essay-name {
+  font: 34px/1.1 var(--serif);
+}
+.feature-essay-blurb {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.feature-essay-cta {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.feature-essay:hover .feature-essay-name {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+@media (max-width: 800px) {
+  .feature-essay {
+    grid-template-columns: 1fr;
+  }
+}
+@media print {
+  .feature-essay {
+    display: none;
+  }
+}
+html:lang(zh) .feature-essay-name {
+  font-size: 28px;
+  line-height: 1.4;
+}
 /* A standalone essay page outside the four chapters. */
 .essay-piece {
   padding-block: 88px 24px;
