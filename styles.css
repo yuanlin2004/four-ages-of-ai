@@ -670,6 +670,169 @@ html:lang(zh) .prose .screen-note .screen-title {
     color: black;
   }
 }
+/* Detroit: Become Human parallels: an end-of-chapter flowchart. */
+.prose .flowchart {
+  margin: 34px 0 0;
+  padding: 26px 30px 30px;
+  background: #fbfaf6;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--age);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.8;
+}
+.prose .flowchart .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.flowchart .eyebrow cite {
+  font-style: normal;
+}
+/* The android's temple light, in its calm blue. */
+.led {
+  flex: none;
+  width: 13px;
+  height: 13px;
+  border: 3px solid #3a95c9;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(58, 149, 201, 0.55);
+}
+.prose .flowchart .flow-title {
+  color: var(--ink);
+  font: 25px/1.3 var(--serif);
+  margin-bottom: 14px;
+}
+.prose .flowchart p {
+  margin-bottom: 0;
+}
+.prose .flowchart p + p:not(.flow-title) {
+  margin-top: 12px;
+}
+.flow {
+  margin-top: 26px;
+  text-align: center;
+}
+.prose .flow .flow-start {
+  display: inline-block;
+  max-width: 32em;
+  margin: 0;
+  padding: 10px 18px;
+  background: var(--paper);
+  border: 1.5px solid var(--age);
+  font-weight: 600;
+  line-height: 1.6;
+}
+.flow-branches {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 18px 0 0;
+  padding: 22px 0 0;
+  list-style: none;
+}
+.flow-branches::before,
+.flow-branches::after,
+.flow-branches li::before {
+  content: "";
+  position: absolute;
+  border-color: var(--age);
+  border-style: solid;
+  border-width: 0;
+}
+.flow-branches::before {
+  top: 0;
+  left: calc((100% - 28px) / 6);
+  right: calc((100% - 28px) / 6);
+  border-top-width: 1.5px;
+}
+.flow-branches::after {
+  top: -18px;
+  left: 50%;
+  height: 18px;
+  border-left-width: 1.5px;
+}
+.flow-branches li {
+  position: relative;
+  padding: 12px 14px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.flow-branches li::before {
+  top: -23px;
+  left: 50%;
+  height: 22px;
+  border-left-width: 1.5px;
+}
+.flow-tag {
+  display: block;
+  color: var(--age);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+.flow-branches strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.flow-branches .flow-locked {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-style: dashed;
+  color: var(--muted);
+  text-align: center;
+}
+.flow-lock {
+  font: 34px/1 var(--serif);
+  margin-bottom: 6px;
+}
+html:lang(zh) .flowchart {
+  line-height: 2;
+}
+html:lang(zh) .prose .flowchart .flow-title {
+  font-size: 21px;
+  line-height: 1.6;
+}
+@media (max-width: 600px) {
+  .prose .flowchart {
+    padding: 22px 20px 24px;
+  }
+  .flow-branches {
+    grid-template-columns: 1fr;
+    padding-top: 0;
+  }
+  .flow-branches::before {
+    display: none;
+  }
+  .flow-branches li::before {
+    top: -15px;
+    height: 14px;
+  }
+  .flow-branches li:first-child::before {
+    display: none;
+  }
+}
+@media print {
+  .prose .flowchart,
+  .prose .flow .flow-start,
+  .flow-branches li {
+    background: none;
+  }
+  .led {
+    box-shadow: none;
+  }
+}
 .chapter-pull {
   color: var(--age);
   font: clamp(31px, 3.1vw, 42px) / 1.16 var(--serif);
