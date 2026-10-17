@@ -56,7 +56,7 @@ Change the paper, ink, and four chapter colors in the `:root` variables at the t
 
 The complete essay and links remain usable without JavaScript. JavaScript adds reading progress, automatic reading time, in-page enlargement, and the print control. “Print essay” uses the browser's print dialog, with an option to save as PDF; research notes open automatically for printing.
 
-There are no analytics, cookies, accounts, external runtime scripts, or font-service requests. Research links open external source pages only when followed.
+There are no analytics, cookies, accounts, external runtime scripts, or font-service requests. Research links open external source pages only when followed. The song video below the afterword loads from YouTube only when someone presses play.
 
 ## Language switching and posters
 
