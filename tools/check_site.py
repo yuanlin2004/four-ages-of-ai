@@ -37,9 +37,21 @@ class Page(HTMLParser):
             self.language = attrs.get("lang")
 
 
+def counterpart(filename):
+    """The other language's edition of a page: index.html <-> zh.html, song.html <-> zh-song.html."""
+    if filename == "index.html":
+        return "zh.html"
+    if filename == "zh.html":
+        return "index.html"
+    return filename[3:] if filename.startswith("zh-") else "zh-" + filename
+
+
 pages = {}
-for filename, language in [("index.html", "en"), ("zh.html", "zh-CN")]:
-    source = ROOT / filename
+for source in sorted(ROOT.glob("*.html")):
+    filename = source.name
+    language = "zh-CN" if filename.startswith("zh") else "en"
+    if not (ROOT / counterpart(filename)).is_file():
+        errors.append(f"{filename}: missing other-language edition {counterpart(filename)}")
     page = Page()
     page.feed(source.read_text(encoding="utf-8"))
     pages[source] = page
@@ -83,4 +95,4 @@ if not (ROOT / ".nojekyll").is_file():
 if errors:
     print("Site checks failed:\n" + "\n".join(f"- {error}" for error in errors))
     sys.exit(1)
-print(f"PASS: {len(pages)} language editions, {sum(len(page.urls) for page in pages.values())} HTML references, CSS assets, accessibility targets, and Pages-relative paths.")
+print(f"PASS: {len(pages)} pages in two language editions, {sum(len(page.urls) for page in pages.values())} HTML references, CSS assets, accessibility targets, and Pages-relative paths.")

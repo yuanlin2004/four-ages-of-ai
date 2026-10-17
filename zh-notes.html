@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f2eb" />
+    <title>参考资料与说明——人工智能的四个时代</title>
+    <meta
+      name="description"
+      content="《人工智能的四个时代》背后的参考资料：技术原理、研究发现与编写方法。"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="参考资料与说明——人工智能的四个时代" />
+    <meta
+      property="og:description"
+      content="《人工智能的四个时代》背后的参考资料：技术原理、研究发现与编写方法。"
+    />
+    <meta
+      property="og:image"
+      content="https://yuanlin2004.github.io/four-ages-of-ai/assets/four-ages-poster-zh.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="四幅关于人的场景：镜像时代、让渡时代、无用时代与重塑时代。"
+    />
+    <meta property="og:locale" content="zh_CN" />
+    <meta
+      property="og:url"
+      content="https://yuanlin2004.github.io/four-ages-of-ai/zh-notes.html"
+    />
+    <link
+      rel="canonical"
+      href="https://yuanlin2004.github.io/four-ages-of-ai/zh-notes.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://yuanlin2004.github.io/four-ages-of-ai/notes.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="zh-CN"
+      href="https://yuanlin2004.github.io/four-ages-of-ai/zh-notes.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://yuanlin2004.github.io/four-ages-of-ai/notes.html"
+    />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css?v=d64858b2" />
+    <script src="script.js" defer></script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">跳至正文</a>
+    <header class="masthead wrap">
+      <a class="brand" href="zh.html" aria-label="人工智能的四个时代——首页"
+        ><span class="brand-mark" aria-hidden="true">iv.</span
+        ><span
+          >人工智能的<br />
+          四个时代</span
+        ></a
+      >
+      <nav aria-label="主导航">
+        <a href="zh.html#ages">四个时代</a>
+        <a href="zh-song.html">一首歌</a>
+        <a href="zh-perspective.html">补充阅读</a>
+        <a href="zh-notes.html" aria-current="page">参考资料</a>
+      </nav>
+      <div class="language-switch" role="group" aria-label="Language / 语言">
+        <a href="notes.html" lang="en" hreflang="en" data-language-switch
+          >English</a
+        >
+        <a href="zh-notes.html" lang="zh-CN" hreflang="zh-CN" aria-current="page"
+          >中文</a
+        >
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="companion wrap" id="notes" aria-labelledby="notes-title">
+        <div class="companion-heading">
+          <p class="eyebrow">继续追问</p>
+          <h1 id="notes-title">
+            技术从何而来<br />
+            <em>判断有何依据</em>
+          </h1>
+          <p>技术能解释变化为何发生，却不能替人决定怎样生活。</p>
+          <p class="fine-text">
+            以下区分技术原理、研究发现与本文的推想。<br />
+            展开任意一项，了解具体依据。
+          </p>
+        </div>
+        <div class="notes-list">
+          <details id="note-models">
+            <summary>
+              <span class="note-number">01</span
+              ><span>机器为什么能模仿人的表达<small>技术基础</small></span
+              ><span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>
+                Transformer
+                利用注意力机制，处理一段文字中各部分之间的联系。它的训练过程便于并行计算，是现代语言模型的重要基础。不过，能生成像人说的话，还不足以证明机器有感受、有体验。
+              </p>
+              <p>
+                模型能否被广泛使用，还取决于硬件、内存和成本。FlashAttention
+                通过分块计算，减少 GPU
+                不同层级内存之间来回搬运数据的开销。这有助于提高运行效率，却不能回答谁拥有这些系统、谁分享收益。
+              </p>
+              <p>
+                话说得流畅，是否意味着有体验，至今没有定论。Butlin、Long
+                等人在 2023 年依据多种意识科学理论列出一组指标，认为目前没有哪个
+                AI 系统很可能具有意识，但也没有发现明显的技术障碍阻止人们造出这样的系统。
+              </p>
+              <a href="https://arxiv.org/abs/1706.03762"
+                >Vaswani 等 · Attention Is All You Need（2017）↗</a
+              ><a href="https://arxiv.org/abs/2205.14135"
+                >Dao 等 · FlashAttention（2022）↗</a
+              ><a href="https://arxiv.org/abs/2308.08708"
+                >Butlin、Long 等 · 人工智能中的意识（2023）↗</a
+              >
+            </div>
+          </details>
+          <details id="note-agents">
+            <summary>
+              <span class="note-number">02</span
+              ><span>当 AI 不只回答，还能办事<small>技术基础</small></span
+              ><span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>
+                ReAct
+                尝试让模型先判断下一步该做什么，再采取行动、获取反馈，并继续判断。这样，模型就能借助外部工具办事，而不只是生成文字。
+              </p>
+              <p>
+                对使用者来说，关键不只是 AI
+                能做多少事，还包括它获准做什么、何时需要人确认，以及做错后能否补救。数据放在自己的设备上，还是放在云端，确实会影响管理方式；但放在哪里，并不等于谁有权作主。这些是本文据技术机制提出的设计问题，不是该论文对社会未来的结论。
+              </p>
+              <p>
+                Chan 等人建议为智能体设置身份标识、实时监测和活动记录，让它们的行动看得见、查得到。早在
+                1983 年，Bainbridge 的《自动化的反讽》就提醒：只负责监督的人，缺少亲手操作的练习，等系统出错时反而最难接手。如今，这一观察也被用来讨论
+                AI 助手。
+              </p>
+              <a href="https://arxiv.org/abs/2210.03629"
+                >Yao 等 · ReAct（2022 年预印本；ICLR 2023）↗</a
+              ><a href="https://arxiv.org/abs/2401.13138"
+                >Chan 等 · 让 AI 智能体可被看见（FAccT 2024）↗</a
+              ><a href="https://doi.org/10.1016/0005-1098(83)90046-8"
+                >Bainbridge · 自动化的反讽（Automatica，1983）↗</a
+              >
+            </div>
+          </details>
+          <details id="note-thinking">
+            <summary>
+              <span class="note-number">03</span
+              ><span
+                >使用 AI，会怎样改变思考？<small>研究发现及其局限</small></span
+              ><span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>
+                Lee 等人调查了 319 名知识工作者。受访者表示，越相信 AI
+                的回答，自己往往越少花力气去质疑、推敲；与此同时，核对信息、整合结果，也成为工作中的重要部分。
+              </p>
+              <p>
+                这项调查记录的是受访者对自身行为的描述，不能据此判定 AI
+                造成了长期的能力退化。“让渡时代”讨论的是一种值得警惕的可能，而不是把这种可能当作研究已经证明的事实。
+              </p>
+              <p>
+                Bastani 等人在近千名高中生中做了实地实验：可随意使用 GPT-4
+                的学生，练习成绩提高了，可一旦不能再用，考试成绩反而下降。只给提示、不直接给答案的辅导版本，基本避免了这种损害。
+              </p>
+              <a
+                href="https://www.microsoft.com/en-us/research/publication/the-impact-of-generative-ai-on-critical-thinking-self-reported-reductions-in-cognitive-effort-and-confidence-effects-from-a-survey-of-knowledge-workers/"
+                >Lee 等 · 生成式 AI 对批判性思考的影响（CHI 2025）↗</a
+              ><a href="https://doi.org/10.1073/pnas.2422633122"
+                >Bastani 等 · 没有护栏的生成式 AI 可能妨碍学习（PNAS，2025）↗</a
+              >
+            </div>
+          </details>
+          <details id="note-work">
+            <summary>
+              <span class="note-number">04</span
+              ><span
+                >工作会受影响，不等于岗位会消失<small
+                  >劳动研究 · 影响因地区与群体而异</small
+                ></span
+              ><span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>
+                国际劳工组织把不同职业拆成具体任务，评估哪些任务可能受到生成式
+                AI
+                影响。报告认为，由于多数职业仍有需要人参与的部分，工作内容的调整比整个岗位被取代更可能发生。不同国家、行业与群体受到的影响，也不一样。
+              </p>
+              <p>
+                因此，不能一看到“可能受到影响”，就把它理解成“将会失业”。但反过来，这项研究也没有保证岗位转型一定顺利、新工作一定及时出现，或技术带来的好处一定能分到每个人手里。
+              </p>
+              <p>
+                早期实验显示，收益并不均匀。在 Noy 与 Zhang
+                的实验中，写作任务完成得更快；在 Brynjolfsson、Li 与 Raymond
+                对客服人员的实地研究中，经验较少的员工效率提升最多。Eloundou
+                等人估算的是哪些任务可能受影响，而不是哪些岗位会消失。
+              </p>
+              <p>
+                失去的也不只是收入。Paul 与 Moser
+                的元分析发现，失业与更差的心理健康相关，重新就业则与恢复相关。
+              </p>
+              <a
+                href="https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure"
+                >Gmyrek 等 · 生成式 AI 与就业（国际劳工组织，2025）↗</a
+              ><a href="https://arxiv.org/abs/2303.10130"
+                >Eloundou 等 · GPTs are GPTs（Science，2024）↗</a
+              ><a href="https://doi.org/10.1126/science.adh2586"
+                >Noy 与 Zhang · 生成式 AI 的生产率效应（Science，2023）↗</a
+              ><a href="https://arxiv.org/abs/2304.11771"
+                >Brynjolfsson、Li 与 Raymond · 工作中的生成式 AI（QJE，2025）↗</a
+              ><a href="https://doi.org/10.1016/j.jvb.2009.01.001"
+                >Paul 与 Moser · 失业损害心理健康（2009）↗</a
+              >
+            </div>
+          </details>
+          <details id="note-authenticity">
+            <summary>
+              <span class="note-number">05</span
+              ><span
+                >模仿遇上判断<small>研究发现 · 真实感</small></span
+              ><span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>
+                Jakesch、Hancock 与 Naaman 的实验发现，人们无法可靠地区分 AI
+                写的自我介绍和人写的自我介绍。大家依赖第一人称、谈及家人等线索来判断，而这些线索 AI
+                也能轻易模仿。
+              </p>
+              <p>
+                借助模型写作，也可能改变我们说什么。另一项研究中，与带有立场的模型一起写作的人，表达的观点会向模型靠拢。Doshi
+                与 Hauser 发现，AI 提供的点子能让单篇故事更有创意，却让整体作品彼此更相似。
+              </p>
+              <p>
+                C2PA
+                标准定义的“内容凭证”，可以为图片、影音等附上经过签名的制作与编辑记录。它能说明来源，却不能证明真心。
+              </p>
+              <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10089155/"
+                >Jakesch 等 · 人类判断 AI 生成文字的直觉并不可靠（PNAS，2023）↗</a
+              ><a href="https://arxiv.org/abs/2302.00560"
+                >Jakesch 等 · 与有立场的语言模型合写（CHI 2023）↗</a
+              ><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11244532/"
+                >Doshi 与 Hauser · 生成式 AI 与创意多样性（Science Advances，2024）↗</a
+              ><a
+                href="https://spec.c2pa.org/specifications/specifications/2.2/specs/C2PA_Specification"
+                >C2PA · 内容凭证技术规范 ↗</a
+              >
+            </div>
+          </details>
+          <details id="note-control">
+            <summary>
+              <span class="note-number">06</span
+              ><span
+                >舒适，却失去掌控<small>论证与历史 · 并非预测</small></span
+              ><span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>
+                Kulveit
+                等人认为，AI 不必通过突然的夺权，也可能削弱人的影响力。当经济、国家和文化越来越少依赖人的劳动与参与，促使制度回应民意的压力也可能随之减弱。这是一篇立场论文，不是实证结论。
+              </p>
+              <p>
+                空闲时间该怎么用，这个问题比 AI 更古老。1930
+                年，凯恩斯设想后代将摆脱经济上的匮乏，转而面对一个“永久的问题”：如何活得明智、愉快而美好。
+              </p>
+              <a href="https://arxiv.org/abs/2501.16946"
+                >Kulveit 等 · 渐进式失权（ICML 2025 立场论文）↗</a
+              ><a
+                href="https://www.hetwebsite.net/het/texts/keynes/keynes1930grandchildren.htm"
+                >凯恩斯 · 我们后代的经济前景（1930）↗</a
+              >
+            </div>
+          </details>
+          <details id="note-fiction">
+            <summary>
+              <span class="note-number">07</span
+              ><span
+                >虚构，也是一种预演<small>《黑镜》· 虚构作品</small></span
+              ><span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>
+                《黑镜》是虚构作品。本文把其中的故事当作思想实验，用来照见模式，它们本身证明不了什么。剧集用夸张让一种模式变得清晰可见；本文借用的是其中缓慢的那一种：伤害通过便利、默认设置和同意书一点点累积，并没有哪一刻突然被夺权。
+              </p>
+              <p>
+                2011 年介绍这部剧时，查理·布鲁克写道：片名里的“黑镜”，就挂在每面墙上、摆在每张桌上、握在每个人的手心里，也就是电视、显示器和智能手机的屏幕。
+              </p>
+              <p>
+                文中提到的剧集：《一千五百万积分》（2011）、《马上回来》（2013）、《急转直下》（2016）、《圣朱尼佩罗》（2016）、《绞死DJ》（2017）、《琼很糟糕》（2023）、《普通人》（2025）。
+              </p>
+              <a
+                href="https://www.theguardian.com/technology/2011/dec/01/charlie-brooker-dark-side-gadget-addiction-black-mirror"
+                >布鲁克 · 我们对电子产品成瘾的阴暗面（《卫报》，2011）↗</a
+              >
+            </div>
+          </details>
+          <details id="note-editorial">
+            <summary>
+              <span class="note-number">08</span
+              ><span>哪些是事实，哪些是推想？<small>写作说明</small></span
+              ><span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>
+                文中的“四个时代”，是帮助我们思考的一种划分，不是已经得到证明的历史规律。开篇故事是虚构场景；关于尊严、拒绝权和公共参与的讨论，是价值判断。所引研究只为具体的技术或现实问题提供依据，并不能证明整套未来设想一定成立。
+              </p>
+              <p>
+                这是一个独立项目。文章与海报都从人的处境出发，讨论 AI
+                可能带来的变化。海报上的年代只是设想，文章也不把任何一种未来视为必然。
+              </p>
+              <a
+                href="assets/four-ages-poster-zh.png"
+                download="the-four-ages-of-ai-zh.png"
+                >下载中文版海报 ↓</a
+              >
+            </div>
+          </details>
+        </div>
+      </section>
+      <nav class="page-turn wrap" aria-label="继续阅读">
+        <a class="page-turn-prev" href="zh-perspective.html" rel="prev"
+          ><span>← 上一页</span>补充阅读</a
+        >
+      </nav>
+    </main>
+
+    <footer class="footer wrap">
+      <a class="brand" href="zh.html"
+        ><span class="brand-mark" aria-hidden="true">iv.</span
+        ><span
+          >人工智能的<br />
+          四个时代</span
+        ></a
+      >
+      <p>
+        一个独立项目。<br />
+        关于 AI，也关于我们自己。
+      </p>
+      <div>
+        <a href="notes.html" lang="en" hreflang="en" data-language-switch
+          >English</a
+        >
+        <a href="zh-song.html">另一边的歌</a
+        ><a href="zh-perspective.html">补充阅读</a
+        ><a href="zh-notes.html" aria-current="page">参考资料与说明</a
+        ><button class="text-button" type="button" id="print-essay" hidden>
+          打印本页 <span aria-hidden="true">↗</span></button
+        ><a href="#top">回到顶部 ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
