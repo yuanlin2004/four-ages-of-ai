@@ -4,43 +4,18 @@
   const labels = isChinese
     ? { zoomIn: "放大 +", fit: "适应屏幕 −" }
     : { zoomIn: "Zoom in +", fit: "Fit to screen −" };
-  let lastReadChapter = null;
   document.querySelectorAll("[data-language-switch]").forEach((link) => {
     link.addEventListener("click", () => {
-      const current = document.querySelector(
-        '[data-chapter][aria-current="location"]',
-      )?.dataset.chapter;
       const destination = new URL(
         link.getAttribute("href"),
         window.location.href,
       );
-      const hash = window.location.hash;
-      const isOtherSection =
-        hash &&
-        !["#mirror", "#surrender", "#irrelevance", "#becoming"].includes(hash);
-      destination.hash =
-        current || (isOtherSection ? hash : lastReadChapter || hash);
+      destination.hash = window.location.hash;
       link.href = destination.href;
     });
   });
-  const essay = document.querySelector(".essay");
-  const readingTime = document.querySelector("#reading-time");
-  const readingText = [
-    ...document.querySelectorAll(".thesis, .essay, .afterword"),
-  ]
-    .map((section) => section.textContent.trim())
-    .join(" ");
-  const readingUnits = isChinese
-    ? (readingText.match(/[\u3400-\u9fff]/g) || []).length
-    : readingText.split(/\s+/).length;
-  const minutes = Math.max(
-    1,
-    Math.ceil(readingUnits / (isChinese ? 450 : 200)),
-  );
-  readingTime.textContent = isChinese ? `${minutes} 分钟` : `${minutes} MIN`;
 
-  const chapters = [...document.querySelectorAll(".chapter")];
-  const chapterLinks = [...document.querySelectorAll("[data-chapter]")];
+  const essay = document.querySelector(".essay");
   const progress = document.querySelector("#reading-progress");
   let scheduled = false;
   function updateReadingPosition() {
@@ -51,17 +26,6 @@
       Math.max(0, ((window.scrollY - start + 100) / distance) * 100),
     );
     progress.style.width = `${percent}%`;
-    let current = null;
-    for (const chapter of chapters) {
-      if (chapter.getBoundingClientRect().top <= 160) current = chapter.id;
-    }
-    if (essay.getBoundingClientRect().bottom < 100) current = null;
-    if (current) lastReadChapter = current;
-    chapterLinks.forEach((link) => {
-      if (link.dataset.chapter === current)
-        link.setAttribute("aria-current", "location");
-      else link.removeAttribute("aria-current");
-    });
     scheduled = false;
   }
   function scheduleUpdate() {
@@ -70,11 +34,13 @@
       requestAnimationFrame(updateReadingPosition);
     }
   }
-  window.addEventListener("scroll", scheduleUpdate, { passive: true });
-  window.addEventListener("resize", scheduleUpdate);
-  window.addEventListener("load", scheduleUpdate);
-  document.fonts?.ready.then(scheduleUpdate);
-  updateReadingPosition();
+  if (essay && progress) {
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", scheduleUpdate);
+    window.addEventListener("load", scheduleUpdate);
+    document.fonts?.ready.then(scheduleUpdate);
+    updateReadingPosition();
+  }
 
   function revealReferencedNote() {
     const target = document.getElementById(window.location.hash.slice(1));
@@ -93,9 +59,9 @@
   revealReferencedNote();
 
   const dialog = document.querySelector("#poster-dialog");
-  const viewport = dialog.querySelector(".poster-viewport");
+  const viewport = dialog?.querySelector(".poster-viewport");
   const zoom = document.querySelector("#poster-zoom");
-  if (typeof dialog.showModal === "function") {
+  if (typeof dialog?.showModal === "function") {
     document.querySelectorAll("[data-open-poster]").forEach((link) => {
       link.addEventListener("click", (event) => {
         if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
@@ -155,7 +121,7 @@
   printButton.addEventListener("click", () => window.print());
   let closedNotes = [];
   window.addEventListener("beforeprint", () => {
-    if (dialog.open) dialog.close();
+    if (dialog?.open) dialog.close();
     closedNotes = [...document.querySelectorAll("details:not([open])")];
     closedNotes.forEach((note) => {
       note.open = true;
