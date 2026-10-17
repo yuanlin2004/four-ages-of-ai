@@ -907,7 +907,7 @@ html:lang(zh) .prose .flowchart .flow-title {
 }
 .beyond-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   border-block: 1px solid var(--ink);
   margin-top: 18px;
 }
@@ -918,8 +918,11 @@ html:lang(zh) .prose .flowchart .flow-title {
   padding: 24px 26px 30px;
   transition: background 0.2s;
 }
-.beyond-entry + .beyond-entry {
+.beyond-entry:nth-child(even) {
   border-left: 1px solid var(--line);
+}
+.beyond-entry:nth-child(n + 3) {
+  border-top: 1px solid var(--line);
 }
 .beyond-entry:hover {
   background: rgba(255, 255, 255, 0.45);
@@ -944,6 +947,51 @@ html:lang(zh) .prose .flowchart .flow-title {
   font-size: 17px;
   line-height: 1.8;
   margin-top: 1rem;
+}
+/* A standalone essay page outside the four chapters. */
+.essay-piece {
+  padding-block: 88px 24px;
+}
+.essay-piece h1 {
+  font: 55px/1.05 var(--serif);
+  margin: 20px 0 14px;
+}
+.essay-piece-sub {
+  font: italic 25px/1.4 var(--serif);
+  color: var(--age);
+}
+.essay-piece-lede {
+  max-width: 40em;
+  margin-top: 34px;
+  font: 23px/1.5 var(--serif);
+}
+.essay-piece .prose {
+  max-width: 46rem;
+}
+.essay-piece .sources {
+  margin-top: 44px;
+  padding-top: 8px;
+  border-top: 1px solid var(--ink);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.75;
+}
+.essay-piece .sources h3 {
+  font-size: 24px;
+}
+.essay-piece .sources ol {
+  padding-left: 1.4em;
+}
+.essay-piece .sources li + li {
+  margin-top: 8px;
+}
+.essay-piece .sources li:target {
+  background: var(--wash);
+}
+.essay-piece .sources a,
+.essay-piece .prose p > a:not(.citation) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 .page-turn {
   display: flex;
@@ -974,12 +1022,18 @@ html:lang(zh) .prose .flowchart .flow-title {
   .beyond-list {
     grid-template-columns: 1fr;
   }
-  .beyond-entry + .beyond-entry {
+  .beyond-entry:nth-child(even) {
     border-left: 0;
+  }
+  .beyond-entry + .beyond-entry {
     border-top: 1px solid var(--line);
   }
-  .perspective h1 {
+  .perspective h1,
+  .essay-piece h1 {
     font-size: 44px;
+  }
+  .essay-piece-lede {
+    font-size: 20px;
   }
   .page-turn a {
     font-size: 22px;
@@ -2090,7 +2144,8 @@ html:lang(zh) .afterword-lead {
   line-height: 1.8;
 }
 html:lang(zh) .companion h1,
-html:lang(zh) .perspective h1 {
+html:lang(zh) .perspective h1,
+html:lang(zh) .essay-piece h1 {
   font-size: 42px;
   line-height: 1.55;
 }
@@ -2099,6 +2154,17 @@ html:lang(zh) .beyond-name {
   line-height: 1.5;
 }
 html:lang(zh) .perspective p:not(.eyebrow) {
+  line-height: 2;
+}
+html:lang(zh) .essay-piece-sub {
+  font-style: normal;
+  font-size: 21px;
+}
+html:lang(zh) .essay-piece-lede {
+  font-size: 20px;
+  line-height: 1.9;
+}
+html:lang(zh) .essay-piece .prose {
   line-height: 2;
 }
 html:lang(zh) .note-body,
