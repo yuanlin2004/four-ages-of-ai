@@ -1,0 +1,17 @@
+name: Check website
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Check links, assets, and accessibility references
+        run: python3 tools/check_site.py
+      - name: Check JavaScript syntax
+        run: node --check script.js

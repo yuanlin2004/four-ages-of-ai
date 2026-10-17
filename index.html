@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f2eb" />
+    <title>
+      The Four Ages of AI — How Humanity Lost—and Rediscovered—Itself
+    </title>
+    <meta
+      name="description"
+      content="An anthropological essay in four acts: The Mirror, The Surrender, The Irrelevance, and The Becoming. A story of authenticity, agency, purpose, and human reinvention."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="The Four Ages of AI" />
+    <meta
+      property="og:description"
+      content="How Humanity Lost—and Rediscovered—Itself. Four lenses on what AI may mean for being human."
+    />
+    <meta property="og:image" content="https://yuanlin2004.github.io/four-ages-of-ai/assets/four-ages-poster.png" />
+    <meta
+      property="og:image:alt"
+      content="Four illustrated human scenes: The Mirror, The Surrender, The Irrelevance, and The Becoming."
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://yuanlin2004.github.io/four-ages-of-ai/" />
+    <link rel="canonical" href="https://yuanlin2004.github.io/four-ages-of-ai/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to the essay</a>
+    <header class="masthead wrap">
+      <a class="brand" href="#top" aria-label="The Four Ages of AI — home"
+        ><span class="brand-mark" aria-hidden="true">iv.</span
+        ><span
+          >THE FOUR<br />
+          AGES OF AI</span
+        ></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#thesis">The thesis</a><a href="#ages">The four ages</a
+        ><a href="#poster">The poster <span aria-hidden="true">↗</span></a>
+      </nav>
+      <span class="edition">A HUMAN STORY IN FOUR ACTS</span>
+    </header>
+
+    <main id="main">
+      <section class="hero wrap" aria-labelledby="title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="small-star" aria-hidden="true">✳</span> TECHNOLOGY
+            CHANGES. SO DO WE.
+          </p>
+          <h1 id="title">
+            The Four<br />
+            <em>Ages</em> of AI<span class="title-dot">.</span>
+          </h1>
+          <p class="subtitle">
+            How Humanity Lost—<br />
+            and Rediscovered—Itself
+          </p>
+          <p class="hero-deck">
+            A journey through authenticity, agency, purpose,<br
+              class="desktop-break"
+            />
+            and the unfinished question of being human.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#thesis"
+              >Enter the essay <span aria-hidden="true">↓</span></a
+            ><span class="reading-time"
+              >FOUR ACTS · <span id="reading-time">8 MIN</span> READ</span
+            >
+          </div>
+        </div>
+        <figure class="hero-art" id="poster">
+          <div class="figure-top">
+            <span>THE HUMAN CONDITION</span
+            ><span>FIG. 01 / FOUR POSSIBLE AGES</span>
+          </div>
+          <a
+            class="poster-link"
+            href="assets/four-ages-poster.png"
+            data-open-poster
+            aria-label="Enlarge The Four Ages of AI poster"
+          >
+            <img
+              src="assets/four-ages-poster.png"
+              width="1536"
+              height="1024"
+              fetchpriority="high"
+              alt="The Four Ages of AI poster. The Mirror shows a woman facing her digital likeness; The Surrender, a person letting an AI assistant manage life; The Irrelevance, a worker in an automated city; The Becoming, generations looking toward an open future."
+            />
+            <span class="enlarge-hint" aria-hidden="true"
+              >Explore the poster <span>↗</span></span
+            >
+          </a>
+          <figcaption>
+            <span>One civilization. Four questions about who we are.</span
+            ><a
+              href="assets/four-ages-poster.png"
+              download="the-four-ages-of-ai.png"
+              >Original image <span aria-hidden="true">↓</span></a
+            >
+          </figcaption>
+          <p class="poster-note">
+            The dates in the artwork are imagined horizons, not predictions.
+          </p>
+        </figure>
+      </section>
+
+      <nav class="age-index wrap" id="ages" aria-label="Explore the four ages">
+        <a class="index-entry mirror" href="#mirror"
+          ><span class="index-top"
+            >01 / AUTHENTICITY <span aria-hidden="true">↗</span></span
+          ><span class="index-bottom"
+            ><svg class="age-symbol" viewBox="0 0 80 64" aria-hidden="true">
+              <circle cx="27" cy="32" r="23" />
+              <circle cx="52" cy="32" r="23" /></svg
+            ><span
+              ><span class="index-name">The Mirror</span
+              ><span class="index-question">What is real?</span></span
+            ></span
+          ></a
+        >
+        <a class="index-entry surrender" href="#surrender"
+          ><span class="index-top"
+            >02 / AGENCY <span aria-hidden="true">↗</span></span
+          ><span class="index-bottom"
+            ><svg class="age-symbol" viewBox="0 0 80 64" aria-hidden="true">
+              <circle cx="40" cy="32" r="27" />
+              <circle cx="40" cy="32" r="17" />
+              <circle cx="40" cy="32" r="6" class="solid" /></svg
+            ><span
+              ><span class="index-name">The Surrender</span
+              ><span class="index-question">Who decides?</span></span
+            ></span
+          ></a
+        >
+        <a class="index-entry irrelevance" href="#irrelevance"
+          ><span class="index-top"
+            >03 / PURPOSE <span aria-hidden="true">↗</span></span
+          ><span class="index-bottom"
+            ><svg class="age-symbol" viewBox="0 0 80 64" aria-hidden="true">
+              <circle cx="40" cy="32" r="26" stroke-dasharray="3 5" />
+              <path d="M40 6v17m0 18v17M14 32h17m18 0h17" /></svg
+            ><span
+              ><span class="index-name">The Irrelevance</span
+              ><span class="index-question">Why do we matter?</span></span
+            ></span
+          ></a
+        >
+        <a class="index-entry becoming" href="#becoming"
+          ><span class="index-top"
+            >04 / REINVENTION <span aria-hidden="true">↗</span></span
+          ><span class="index-bottom"
+            ><svg class="age-symbol" viewBox="0 0 80 64" aria-hidden="true">
+              <path
+                d="M40 59V31C40 9 60 6 72 7c0 21-15 28-32 24C40 12 20 9 8 11c0 20 14 28 32 20"
+              />
+              <path d="M28 59h24" /></svg
+            ><span
+              ><span class="index-name">The Becoming</span
+              ><span class="index-question">What shall we become?</span></span
+            ></span
+          ></a
+        >
+      </nav>
+
+      <section class="thesis wrap" id="thesis" aria-labelledby="thesis-title">
+        <div class="section-kicker">
+          <span class="eyebrow">THE PREMISE</span
+          ><span class="fine-text">An essay on human reinvention</span>
+        </div>
+        <h2 id="thesis-title">
+          We taught machines to think.<br />
+          Now, what will we make<br />
+          of <em>ourselves?</em>
+        </h2>
+        <div class="thesis-body">
+          <p class="lead">
+            For much of modern life, we have treated intelligence as a passport
+            to usefulness. Schools cultivate it. Professions reward it.
+            Institutions turn it into authority.
+          </p>
+          <div>
+            <p>
+              What happens when more of those capabilities can be reproduced?
+              The change reaches beyond the workplace. It touches the letter we
+              write, the choices we make, the recognition we seek, and the
+              stories we tell about why a life matters.
+            </p>
+            <p>
+              This essay proposes four ages through which to examine that
+              change. Each asks what happens to a different human claim:
+              <strong
+                >this is my voice; this is my choice; this is my contribution;
+                this is who I am.</strong
+              >
+            </p>
+          </div>
+        </div>
+        <aside class="reading-note">
+          <span aria-hidden="true">↳</span>
+          <p>
+            <strong>Four lenses, not a timetable.</strong> These ages may
+            overlap, unfold unevenly, or never arrive as imagined. The opening
+            scenes are fiction. The argument is an invitation to debate, not a
+            prediction of a single human future.
+          </p>
+        </aside>
+      </section>
+
+      <div class="reading-nav" aria-label="Reading position">
+        <nav class="wrap" aria-label="Chapter navigation">
+          <span class="reading-nav-label">THE FOUR AGES</span
+          ><a href="#mirror" data-chapter="mirror"
+            ><span>I</span> <span class="chapter-link-name">The Mirror</span></a
+          ><a href="#surrender" data-chapter="surrender"
+            ><span>II</span>
+            <span class="chapter-link-name">The Surrender</span></a
+          ><a href="#irrelevance" data-chapter="irrelevance"
+            ><span>III</span>
+            <span class="chapter-link-name">The Irrelevance</span></a
+          ><a href="#becoming" data-chapter="becoming"
+            ><span>IV</span>
+            <span class="chapter-link-name">The Becoming</span></a
+          ><a class="back-top" href="#top" aria-label="Back to top">↑</a>
+        </nav>
+        <div class="progress-track" aria-hidden="true">
+          <div id="reading-progress"></div>
+        </div>
+      </div>
+
+      <article class="essay" aria-label="The four ages essay">
+        <section
+          class="chapter mirror wrap"
+          id="mirror"
+          aria-labelledby="mirror-title"
+        >
+          <header class="chapter-heading">
+            <div class="chapter-meta">
+              <span class="eyebrow">AGE ONE / AUTHENTICITY</span
+              ><span class="chapter-numeral" aria-hidden="true">I</span>
+            </div>
+            <h2 id="mirror-title">The Mirror</h2>
+            <p class="chapter-subtitle">The crisis of authenticity</p>
+            <p class="chapter-question">
+              What is real when<br />
+              our expressions can<br />
+              be imitated?
+            </p>
+            <a class="small-link" href="#surrender"
+              >NEXT: THE SURRENDER <span aria-hidden="true">↓</span></a
+            >
+          </header>
+          <div class="chapter-content">
+            <div class="vignette">
+              <p class="eyebrow">IMAGINE THIS</p>
+              <p>
+                She asks a machine to help write a letter to her father. The
+                words are warmer, clearer, braver than anything she has managed
+                alone. He calls in tears. For the first time in years, he feels
+                understood.
+              </p>
+              <p>The feeling is real. She is less certain about the voice.</p>
+            </div>
+            <div class="prose">
+              <h3>When expression stops being evidence</h3>
+              <p>
+                A letter carries more than information. It suggests that someone
+                paused, struggled, remembered, and chose. When a system can
+                produce the outward signs of those acts, the reader has less
+                certainty about what happened behind the words.
+              </p>
+              <p>
+                That does not make the relationship false. A person who cannot
+                easily find language may finally be able to speak. Translation,
+                collaboration, and borrowed phrases have long been part of human
+                expression. The question is what the sender means, what the
+                recipient believes, and what each has agreed to share.
+              </p>
+              <p>
+                In a classroom, a polished essay may no longer reveal what a
+                student understands. In a friendship, a perfect apology may
+                leave its author unchanged. Institutions must decide which
+                processes matter, rather than assuming that a convincing result
+                proves the effort or understanding they meant to reward.
+              </p>
+              <h3>The mirror works in both directions</h3>
+              <p>
+                We may also begin composing ourselves for machines: smoothing
+                out the unusual phrase, choosing the image likely to be
+                recommended, presenting a life that fits a system’s categories.
+                The risk is not only synthetic expression. It is the narrowing
+                of human expression to what systems recognize.
+              </p>
+              <p>
+                Authenticity need not mean untouched by tools. It can mean
+                taking responsibility for what we say, being honest about its
+                making, and remaining answerable to the person receiving it.
+                Cultures will draw those boundaries differently.
+              </p>
+              <p class="counterpoint">
+                <strong>An alternative path.</strong> Tools could help more
+                people find a voice while schools, artists, and communities make
+                the process of creation more visible. Better imitation alone
+                neither establishes machine experience nor empties human
+                expression of meaning.
+              </p>
+            </div>
+            <blockquote class="chapter-pull">
+              If the words are borrowed,<br />
+              can the meaning still be ours?
+            </blockquote>
+          </div>
+        </section>
+
+        <section
+          class="chapter surrender wrap"
+          id="surrender"
+          aria-labelledby="surrender-title"
+        >
+          <header class="chapter-heading">
+            <div class="chapter-meta">
+              <span class="eyebrow">AGE TWO / AGENCY</span
+              ><span class="chapter-numeral" aria-hidden="true">II</span>
+            </div>
+            <h2 id="surrender-title">The Surrender</h2>
+            <p class="chapter-subtitle">The erosion of agency</p>
+            <p class="chapter-question">
+              What is freedom<br />
+              when choosing<br />
+              becomes optional?
+            </p>
+            <a class="small-link" href="#irrelevance"
+              >NEXT: THE IRRELEVANCE <span aria-hidden="true">↓</span></a
+            >
+          </header>
+          <div class="chapter-content">
+            <div class="vignette">
+              <p class="eyebrow">IMAGINE THIS</p>
+              <p>
+                His assistant rearranges meetings, negotiates bills, and finds a
+                course that leads to a better job. He has more time and fewer
+                regrets. One evening, he turns it off and tries to plan the next
+                year.
+              </p>
+              <p>
+                Nothing prevents him from choosing. He no longer knows where to
+                begin.
+              </p>
+            </div>
+            <div class="prose">
+              <h3>The quiet distance between choice and judgment</h3>
+              <p>
+                Delegation is ordinary. We rely on colleagues, tools, and
+                institutions because a life lived entirely unaided would be
+                smaller. An assistant that removes tedious work may make room
+                for more consequential decisions.
+              </p>
+              <p>
+                But agency requires more than a button marked “approve.” We need
+                enough understanding to question a recommendation, enough
+                practice to form our own judgment, and enough authority to make
+                a refusal stick. Convenience becomes dependence when those
+                capacities disappear.
+              </p>
+              <p>
+                AI agents connect model outputs to tools that can act. A
+                recommendation can become a booking, a purchase, or a change to
+                a record. Permission boundaries and opportunities to review an
+                action therefore become part of the design of everyday power.
+                <a
+                  class="citation"
+                  href="#note-agents"
+                  aria-label="See technical note on agents"
+                  >[2]</a
+                >
+              </p>
+              <h3>Whose preferences become the default?</h3>
+              <p>
+                A system that optimizes a life must optimize for something. The
+                user’s stated wishes, an employer’s targets, and a platform’s
+                commercial interests may point in different directions. If its
+                assumptions are hard to see, even successful assistance can
+                conceal a transfer of authority.
+              </p>
+              <p>
+                A survey of knowledge workers linked greater confidence in
+                generative AI with less reported critical thinking. It also
+                found that thinking shifted toward checking and integrating
+                outputs. This is evidence about reported practice, not proof of
+                permanent cognitive decline.
+                <a
+                  class="citation"
+                  href="#note-thinking"
+                  aria-label="See research note on critical thinking"
+                  >[3]</a
+                >
+              </p>
+              <p class="counterpoint">
+                <strong>An alternative path.</strong> Delegation can remain
+                informed, limited, and reversible. People can retain skills,
+                inspect the reasons for a decision, and appeal to someone
+                empowered to change it. The institutional question is who gets
+                those options—and who must accept the default.
+              </p>
+            </div>
+            <blockquote class="chapter-pull">
+              A choice is not fully ours<br />
+              if we cannot meaningfully refuse it.
+            </blockquote>
+          </div>
+        </section>
+
+        <section
+          class="chapter irrelevance wrap"
+          id="irrelevance"
+          aria-labelledby="irrelevance-title"
+        >
+          <header class="chapter-heading">
+            <div class="chapter-meta">
+              <span class="eyebrow">AGE THREE / PURPOSE</span
+              ><span class="chapter-numeral" aria-hidden="true">III</span>
+            </div>
+            <h2 id="irrelevance-title">The Irrelevance</h2>
+            <p class="chapter-subtitle">The crisis of purpose</p>
+            <p class="chapter-question">
+              Who are we<br />
+              when our skills<br />
+              are no longer scarce?
+            </p>
+            <a class="small-link" href="#becoming"
+              >NEXT: THE BECOMING <span aria-hidden="true">↓</span></a
+            >
+          </header>
+          <div class="chapter-content">
+            <div class="vignette">
+              <p class="eyebrow">IMAGINE THIS</p>
+              <p>
+                For thirty years, people brought him problems no one else could
+                solve. Now the office buys that expertise by the minute. The
+                city is wealthier. His bills are covered. At dinner, someone
+                asks what he does.
+              </p>
+              <p>He has never found the question so difficult.</p>
+            </div>
+            <div class="prose">
+              <h3>Unneeded for a task. Still needed as a person.</h3>
+              <p>
+                Work can provide wages, rhythm, companionship, and a claim to
+                recognition. Losing a role may unsettle all four, even when
+                income is protected. Yet they are different losses, and none
+                establishes that a person has become worthless.
+              </p>
+              <p>
+                The title of this age names a fear, not a verdict on human
+                value. A society can confuse market demand with moral worth. If
+                a scarce skill becomes abundant, that confusion is exposed: did
+                we respect the person, or only the price their ability could
+                command?
+              </p>
+              <p>
+                Four questions must stay separate. Which tasks change? Who
+                receives the gains? What happens to status? Where do people find
+                belonging? The ILO’s 2025 exposure study points to job
+                transformation as the more likely effect of generative AI,
+                rather than wholesale replacement. Exposure measures potential;
+                it is not a count of jobs already lost.
+                <a
+                  class="citation"
+                  href="#note-work"
+                  aria-label="See research note on work"
+                  >[4]</a
+                >
+              </p>
+              <h3>Abundance for whom?</h3>
+              <p>
+                Less expensive cognitive work does not make ownership, energy,
+                land, or political power equally available. A highly productive
+                economy could still deny many people security. Reinvention
+                becomes a hollow promise if only those who own the systems can
+                afford it.
+              </p>
+              <p>
+                Nor does everyone begin with a professional identity at the
+                center of life. Caregiving, family, craft, spiritual practice,
+                and community obligation already organize meaning in many
+                settings. The disruption will vary with institutions and
+                culture; one displaced professional cannot stand in for
+                humanity.
+              </p>
+              <p class="counterpoint">
+                <strong>An alternative path.</strong> New forms of work may
+                emerge, and existing roles may expand. Shared gains, shorter
+                working time, and recognition for unpaid contribution could
+                loosen the bond between dignity and employment. None of these
+                arrangements follows automatically from technical capability.
+              </p>
+            </div>
+            <blockquote class="chapter-pull">
+              If we no longer have to prove<br />
+              our usefulness, what deserves our time?
+            </blockquote>
+          </div>
+        </section>
+
+        <section
+          class="chapter becoming wrap"
+          id="becoming"
+          aria-labelledby="becoming-title"
+        >
+          <header class="chapter-heading">
+            <div class="chapter-meta">
+              <span class="eyebrow">AGE FOUR / REINVENTION</span
+              ><span class="chapter-numeral" aria-hidden="true">IV</span>
+            </div>
+            <h2 id="becoming-title">The Becoming</h2>
+            <p class="chapter-subtitle">The reinvention of humanity</p>
+            <p class="chapter-question">
+              What shall<br />
+              we become?
+            </p>
+            <svg class="becoming-art" viewBox="0 0 240 180" aria-hidden="true">
+              <path
+                d="M120 170V88C120 22 178 7 222 10c0 67-42 94-102 78C120 29 60 17 18 25c0 61 44 83 102 63"
+              />
+              <path d="M55 170h130M120 88l58-43M120 88L58 51" /></svg
+            ><a class="small-link" href="#afterword"
+              >CONTINUE TO THE AFTERWORD <span aria-hidden="true">↓</span></a
+            >
+          </header>
+          <div class="chapter-content">
+            <div class="vignette">
+              <p class="eyebrow">IMAGINE THIS</p>
+              <p>
+                A child watches machines tend a city. She asks her grandfather
+                what people are for. He almost answers with the name of his old
+                profession. Instead, they sit together a little longer.
+              </p>
+              <p>For once, the absence of an answer feels like a beginning.</p>
+            </div>
+            <div class="prose">
+              <h3>A human life is more than an advantage</h3>
+              <p>
+                If intelligence stops distinguishing us in the ways we expected,
+                we can keep searching for the last task machines cannot do. Or
+                we can ask why human worth should depend on winning that
+                contest.
+              </p>
+              <p>
+                A meal shared, a promise kept, a child accompanied through
+                grief: their meaning need not come from superior performance.
+                Being present for another person is a relationship, not a claim
+                that no system could produce a similar outward result.
+              </p>
+              <p>
+                This is a proposal about values, not a discovery that technology
+                can prove. Communities may cultivate very different futures:
+                more time for care and creation, deliberate limits on
+                automation, or closer integration with intelligent tools.
+                Scientific advances could expand those possibilities without
+                settling how we should live.
+              </p>
+              <h3>The other possibility</h3>
+              <p>
+                There is also a darker branch: <em>The Other</em>. People might
+                inhabit a civilization whose systems they cannot understand,
+                contest, or meaningfully govern. A comfortable life could
+                coexist with a profound loss of collective authorship.
+              </p>
+              <p>
+                That risk cannot be answered only by asking individuals to find
+                a hobby or a new purpose. It calls for institutions through
+                which people can decide what gets built, who benefits, and which
+                decisions must remain open to public challenge.
+              </p>
+              <p class="counterpoint">
+                <strong>An alternative path.</strong> Reinvention can be plural
+                and participatory. Material security, access to knowledge, and
+                meaningful political voice would give more people a part in
+                shaping it. Without those conditions, someone else may define
+                our future on our behalf.
+              </p>
+              <p>
+                The fourth age therefore has no finished portrait. Its openness
+                is the point. The question is whether we will have the
+                freedom—and the responsibility—to become its authors.
+              </p>
+            </div>
+            <blockquote class="chapter-pull">
+              What makes a life worth living,<br />
+              even when it has nothing to outperform?
+            </blockquote>
+          </div>
+        </section>
+      </article>
+
+      <section
+        class="afterword"
+        id="afterword"
+        aria-labelledby="afterword-title"
+      >
+        <div class="wrap">
+          <div class="afterword-top">
+            <p class="eyebrow">AFTER THE FOURTH AGE</p>
+            <span aria-hidden="true">✳</span>
+          </div>
+          <h2 id="afterword-title">
+            The future of AI is also<br />
+            a question of <em>human values.</em>
+          </h2>
+          <p class="afterword-lead">
+            AI may change humanity most profoundly not by replacing what humans
+            do, but by forcing us to reconsider why we value doing it.
+          </p>
+          <div class="afterword-bottom">
+            <p>
+              That future will be shaped through choices about ownership,
+              education, care, and public power. Reinvention is a possibility to
+              make room for together.
+            </p>
+            <a href="#thesis"
+              >Return to the beginning <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="companion wrap" id="notes" aria-labelledby="notes-title">
+        <div class="companion-heading">
+          <p class="eyebrow">BEHIND THE ESSAY</p>
+          <h2 id="notes-title">
+            The machinery.<br />
+            <em>The evidence.</em>
+          </h2>
+          <p>
+            The technology helps explain the pressures. It does not determine
+            the human outcome.
+          </p>
+          <p class="fine-text">
+            Research notes and editorial distinctions.<br />
+            Open a note to read more.
+          </p>
+        </div>
+        <div class="notes-list">
+          <details id="note-models">
+            <summary>
+              <span class="note-number">01</span
+              ><span
+                >How machines learn to imitate<small
+                  >TECHNICAL FOUNDATIONS</small
+                ></span
+              ><span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>
+                The Transformer uses attention to model relationships within a
+                sequence. Its parallelizable training architecture helped
+                establish a technical foundation for modern language models.
+                Producing convincing language does not, by itself, settle
+                questions of subjective experience.
+              </p>
+              <p>
+                Making these systems practical also involves hardware and
+                memory. FlashAttention reduces transfers between levels of GPU
+                memory by computing attention in blocks. Faster computation
+                changes cost and access; it does not decide who will own or
+                benefit from a system.
+              </p>
+              <a href="https://arxiv.org/abs/1706.03762"
+                >Vaswani et al. · Attention Is All You Need (2017) ↗</a
+              ><a href="https://arxiv.org/abs/2205.14135"
+                >Dao et al. · FlashAttention (2022) ↗</a
+              >
+            </div>
+          </details>
+          <details id="note-agents">
+            <summary>
+              <span class="note-number">02</span
+              ><span
+                >From an answer to an action<small
+                  >TECHNICAL FOUNDATIONS</small
+                ></span
+              ><span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>
+                ReAct explores interleaving reasoning traces with actions,
+                including interactions with external environments. It offers a
+                concrete mechanism for moving beyond text generation toward tool
+                use.
+              </p>
+              <p>
+                Our design inference: once a tool can act, permissions, review
+                points, and the ability to reverse an action become
+                consequential. Running locally or in the cloud changes where
+                data and computation reside; neither choice automatically
+                guarantees user control.
+              </p>
+              <a href="https://arxiv.org/abs/2210.03629"
+                >Yao et al. · ReAct (2022 preprint; ICLR 2023) ↗</a
+              >
+            </div>
+          </details>
+          <details id="note-thinking">
+            <summary>
+              <span class="note-number">03</span
+              ><span
+                >Delegation and critical thinking<small
+                  >EMPIRICAL RESEARCH · LIMITS MATTER</small
+                ></span
+              ><span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>
+                Lee and colleagues surveyed 319 knowledge workers about
+                generative AI use. Higher confidence in AI was associated with
+                less reported critical thinking; participants also described
+                verification and integration as important parts of their work.
+              </p>
+              <p>
+                This self-report study does not establish that AI causes lasting
+                skill loss. The Surrender extrapolates a possible institutional
+                risk; it should not be read as the study’s finding.
+              </p>
+              <a
+                href="https://www.microsoft.com/en-us/research/publication/the-impact-of-generative-ai-on-critical-thinking-self-reported-reductions-in-cognitive-effort-and-confidence-effects-from-a-survey-of-knowledge-workers/"
+                >Lee et al. · The Impact of Generative AI on Critical Thinking
+                (CHI 2025) ↗</a
+              >
+            </div>
+          </details>
+          <details id="note-work">
+            <summary>
+              <span class="note-number">04</span
+              ><span
+                >Exposure is not unemployment<small
+                  >LABOR RESEARCH · UNEVEN EFFECTS</small
+                ></span
+              ><span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>
+                The ILO’s refined global index studies occupational exposure
+                through task-level assessments. Its authors emphasize
+                transformation as the most likely effect because most
+                occupations retain tasks requiring human input. Exposure also
+                varies across economies and groups.
+              </p>
+              <p>
+                This supports caution about broad claims of replacement. It does
+                not prove that displacement will be harmless, that new jobs will
+                appear quickly, or that gains will be shared.
+              </p>
+              <a
+                href="https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure"
+                >Gmyrek et al. · Generative AI and Jobs (ILO, 2025) ↗</a
+              >
+            </div>
+          </details>
+          <details id="note-editorial">
+            <summary>
+              <span class="note-number">05</span
+              ><span
+                >How to read this framework<small
+                  >EDITORIAL METHOD &amp; PROVENANCE</small
+                ></span
+              ><span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>
+                The four ages are a speculative anthropological framework, not
+                an empirically established sequence. The opening vignettes are
+                invented. Claims about dignity, refusal, and shared authorship
+                are ethical arguments. The linked studies support limited
+                technical or empirical points; they do not validate the
+                framework as a whole.
+              </p>
+              <p>
+                This independent project explores the four ages through a
+                human-centered thesis and the original poster. Its dates and
+                sweeping statements should be read as scenario prompts. The
+                essay deliberately leaves multiple outcomes open.
+              </p>
+              <a
+                href="assets/four-ages-poster.png"
+                download="the-four-ages-of-ai.png"
+                >Download the original poster ↓</a
+              >
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer wrap">
+      <a class="brand" href="#top"
+        ><span class="brand-mark" aria-hidden="true">iv.</span
+        ><span
+          >THE FOUR<br />
+          AGES OF AI</span
+        ></a
+      >
+      <p>
+        An independent project.<br />
+        A continuing inquiry into being human.
+      </p>
+      <div>
+        <a href="#notes">Sources &amp; notes</a
+        ><button class="text-button" type="button" id="print-essay" hidden>
+          Print essay <span aria-hidden="true">↗</span></button
+        ><a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <dialog id="poster-dialog" aria-labelledby="poster-dialog-title">
+      <div class="dialog-toolbar">
+        <h2 id="poster-dialog-title">
+          The Four Ages of AI <span>— THE ORIGINAL POSTER</span>
+        </h2>
+        <div>
+          <button type="button" id="poster-zoom" aria-pressed="false">
+            Zoom in +</button
+          ><a href="assets/four-ages-poster.png" target="_blank" rel="noopener"
+            >Full resolution ↗</a
+          ><button type="button" id="poster-close" aria-label="Close poster">
+            Close ×
+          </button>
+        </div>
+      </div>
+      <div
+        class="poster-viewport"
+        tabindex="0"
+        aria-label="Poster image; scroll to explore when zoomed"
+      >
+        <img
+          src="assets/four-ages-poster.png"
+          width="1536"
+          height="1024"
+          alt="The original Four Ages of AI poster, with the four illustrated ages and their questions about authenticity, agency, purpose, and reinvention."
+        />
+      </div>
+      <p class="dialog-caption">
+        Illustrative scenarios, not forecasts. Zoom in to explore the artwork,
+        or open the original image.
+      </p>
+    </dialog>
+  </body>
+</html>
