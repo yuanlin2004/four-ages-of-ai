@@ -39,7 +39,7 @@
 :root {
   --paper: #f5f2eb;
   --ink: #242823;
-  --muted: #676b61;
+  --muted: #575c53;
   --line: #d6d5ca;
   --accent: #9d4838;
   --mirror: #9d4838;
@@ -118,13 +118,13 @@ button[hidden] {
   margin-inline: auto;
 }
 .eyebrow {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: 1.5px;
 }
 .fine-text {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.65;
   color: var(--muted);
 }
@@ -161,7 +161,7 @@ button[hidden] {
   padding-right: 5px;
 }
 .brand > span:last-child {
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: 1.8px;
@@ -173,14 +173,14 @@ button[hidden] {
   margin-right: 7%;
 }
 .masthead nav a {
-  font-size: 12px;
+  font-size: 14px;
 }
 .masthead nav a:hover {
   text-decoration: underline;
   text-underline-offset: 5px;
 }
 .edition {
-  font-size: 9px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 1.25px;
 }
@@ -195,7 +195,7 @@ button[hidden] {
   padding-right: 36px;
 }
 .hero .eyebrow {
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 1.45px;
   display: flex;
   align-items: center;
@@ -221,7 +221,7 @@ h1 em {
   margin-top: 25px;
 }
 .hero-deck {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.8;
   color: var(--muted);
   margin-top: 23px;
@@ -238,7 +238,7 @@ h1 em {
   gap: 36px;
   min-height: 48px;
   padding: 12px 20px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   transition:
     background 0.2s,
@@ -253,7 +253,7 @@ h1 em {
   transform: translateY(-2px);
 }
 .reading-time {
-  font-size: 9px;
+  font-size: 14px;
   letter-spacing: 0.9px;
   white-space: nowrap;
 }
@@ -264,7 +264,7 @@ h1 em {
 .figure-top {
   display: flex;
   justify-content: space-between;
-  font-size: 8px;
+  font-size: 14px;
   letter-spacing: 1.25px;
   margin-bottom: 13px;
   color: var(--muted);
@@ -285,7 +285,7 @@ h1 em {
   padding: 9px 13px;
   background: var(--paper);
   color: var(--ink);
-  font-size: 10px;
+  font-size: 14px;
   opacity: 0;
   transform: translateY(6px);
   transition:
@@ -305,7 +305,7 @@ figcaption {
   justify-content: space-between;
   gap: 14px;
   margin-top: 17px;
-  font-size: 10px;
+  font-size: 14px;
   color: var(--muted);
 }
 figcaption > a {
@@ -314,7 +314,7 @@ figcaption > a {
   border-bottom: 1px solid var(--line);
 }
 .poster-note {
-  font-size: 9px;
+  font-size: 14px;
   color: var(--muted);
   margin-top: 6px;
 }
@@ -368,7 +368,7 @@ figcaption > a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 9px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 1.15px;
   color: var(--age);
@@ -399,7 +399,7 @@ figcaption > a {
   white-space: nowrap;
 }
 .index-question {
-  font-size: 10px;
+  font-size: 14px;
   color: var(--muted);
   display: block;
   margin-top: 7px;
@@ -432,7 +432,7 @@ figcaption > a {
   font: 29px/1.35 var(--serif);
 }
 .thesis-body > div {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.85;
 }
 .thesis-body p + p {
@@ -451,7 +451,7 @@ figcaption > a {
   color: var(--mirror);
 }
 .reading-note p {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
   line-height: 1.9;
 }
@@ -474,7 +474,7 @@ figcaption > a {
   min-height: 64px;
 }
 .reading-nav-label {
-  font-size: 9px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 1.3px;
 }
@@ -482,7 +482,7 @@ figcaption > a {
   display: flex;
   gap: 9px;
   align-items: center;
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
   transition: color 0.2s;
 }
@@ -531,7 +531,7 @@ figcaption > a {
   margin-bottom: 20px;
 }
 .chapter-meta .eyebrow {
-  font-size: 10px;
+  font-size: 14px;
 }
 .chapter-numeral {
   font: 48px/1 var(--serif);
@@ -543,7 +543,7 @@ figcaption > a {
 }
 .chapter-subtitle {
   color: var(--age);
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 11px;
 }
 .chapter-question {
@@ -552,7 +552,7 @@ figcaption > a {
   max-width: 360px;
 }
 .small-link {
-  font-size: 9px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
   display: inline-flex;
@@ -578,7 +578,7 @@ figcaption > a {
 }
 .vignette .eyebrow {
   color: var(--age);
-  font-size: 9px;
+  font-size: 14px;
   margin-bottom: 17px;
 }
 .vignette p:not(.eyebrow) {
@@ -605,7 +605,7 @@ figcaption > a {
 }
 .citation {
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 14px;
   color: var(--age);
   white-space: nowrap;
   text-decoration: underline;
@@ -613,7 +613,7 @@ figcaption > a {
 }
 .prose .counterpoint {
   font-family: var(--sans);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.85;
   margin-top: 28px;
   padding-top: 21px;
@@ -675,13 +675,13 @@ figcaption > a {
   padding-top: 26px;
 }
 .afterword-bottom p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.85;
   max-width: 510px;
   color: #d0d8ca;
 }
 .afterword-bottom a {
-  font-size: 11px;
+  font-size: 14px;
   white-space: nowrap;
   border-bottom: 1px solid #83907b;
   padding-bottom: 5px;
@@ -700,12 +700,12 @@ figcaption > a {
   margin: 20px 0 22px;
 }
 .companion-heading > p:not(.eyebrow) {
-  font-size: 13px;
+  font-size: 14px;
   max-width: 270px;
 }
 .companion-heading .fine-text {
   margin-top: 25px;
-  font-size: 11px !important;
+  font-size: 14px !important;
 }
 .notes-list {
   border-top: 1px solid var(--line);
@@ -728,12 +728,12 @@ summary::-webkit-details-marker {
   display: none;
 }
 .note-number {
-  font-size: 10px;
+  font-size: 14px;
   color: var(--muted);
 }
 summary small {
   display: block;
-  font-size: 8px;
+  font-size: 14px;
   letter-spacing: 1px;
   margin-top: 7px;
   color: var(--muted);
@@ -747,7 +747,7 @@ details[open] .details-icon {
   transform: rotate(45deg);
 }
 .note-body {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.85;
   padding: 0 35px 25px;
 }
@@ -757,7 +757,7 @@ details[open] .details-icon {
 .note-body a {
   display: block;
   color: var(--mirror);
-  font-size: 11px;
+  font-size: 14px;
   margin-top: 16px;
   line-height: 1.8;
   text-decoration: underline;
@@ -773,7 +773,7 @@ details[open] .details-icon {
   gap: 30px;
 }
 .footer p {
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.7;
   color: var(--muted);
 }
@@ -784,7 +784,7 @@ details[open] .details-icon {
 }
 .footer > div a,
 .text-button {
-  font-size: 10px;
+  font-size: 14px;
 }
 .text-button {
   background: none;
@@ -821,7 +821,7 @@ dialog::backdrop {
   font: 26px/1.2 var(--serif);
 }
 .dialog-toolbar h2 > span {
-  font: 8px/1.5 var(--sans);
+  font: 14px/1.5 var(--sans);
   letter-spacing: 1px;
   margin-left: 10px;
 }
@@ -832,7 +832,7 @@ dialog::backdrop {
 }
 .dialog-toolbar button,
 .dialog-toolbar a {
-  font-size: 11px;
+  font-size: 14px;
   background: none;
   border: 0;
   padding: 7px 2px;
@@ -863,7 +863,7 @@ dialog::backdrop {
   margin: 0;
 }
 .dialog-caption {
-  font-size: 10px;
+  font-size: 14px;
   margin-top: 12px;
   color: var(--muted);
 }
@@ -896,7 +896,7 @@ dialog::backdrop {
     font-size: 90px;
   }
   .hero-deck {
-    font-size: 12px;
+    font-size: 14px;
   }
   .desktop-break {
     display: none;
@@ -919,7 +919,7 @@ dialog::backdrop {
     font-size: 25px;
   }
   .index-question {
-    font-size: 9px;
+    font-size: 14px;
   }
   .chapter {
     gap: 6%;
@@ -931,7 +931,7 @@ dialog::backdrop {
     font-size: 31px;
   }
   .chapter-meta .eyebrow {
-    font-size: 9px;
+    font-size: 14px;
     letter-spacing: 1px;
   }
   .chapter-numeral {
@@ -983,10 +983,10 @@ dialog::backdrop {
     font-size: 108px;
   }
   .hero .eyebrow {
-    font-size: 9px;
+    font-size: 14px;
   }
   .hero-deck {
-    font-size: 13px;
+    font-size: 14px;
   }
   .subtitle {
     font-size: 33px;
@@ -999,7 +999,7 @@ dialog::backdrop {
     margin: 0;
   }
   .figure-top {
-    font-size: 9px;
+    font-size: 14px;
   }
   .enlarge-hint {
     opacity: 1;
@@ -1027,7 +1027,7 @@ dialog::backdrop {
     font-size: 29px;
   }
   .index-question {
-    font-size: 11px;
+    font-size: 14px;
   }
   .index-bottom {
     gap: 17px;
@@ -1048,7 +1048,7 @@ dialog::backdrop {
     font-size: 27px;
   }
   .thesis-body > div {
-    font-size: 12px;
+    font-size: 14px;
   }
   .reading-nav-label {
     display: none;
@@ -1058,7 +1058,7 @@ dialog::backdrop {
     min-height: 60px;
   }
   .reading-nav a {
-    font-size: 10px;
+    font-size: 14px;
     gap: 6px;
   }
   .reading-nav a > span:first-child {
@@ -1076,7 +1076,7 @@ dialog::backdrop {
     margin-bottom: 12px;
   }
   .chapter-meta .eyebrow {
-    font-size: 10px;
+    font-size: 14px;
   }
   .chapter h2 {
     font-size: 67px;
@@ -1166,7 +1166,7 @@ dialog::backdrop {
   }
   .dialog-toolbar button,
   .dialog-toolbar a {
-    font-size: 10px;
+    font-size: 14px;
   }
 }
 @media (max-width: 480px) {
@@ -1184,14 +1184,14 @@ dialog::backdrop {
     font-size: 44px;
   }
   .brand > span:last-child {
-    font-size: 8px;
+    font-size: 14px;
     letter-spacing: 1.3px;
   }
   .masthead nav {
     gap: 17px;
   }
   .masthead nav a {
-    font-size: 10px;
+    font-size: 14px;
   }
   .masthead nav a:first-child {
     display: none;
@@ -1210,7 +1210,7 @@ dialog::backdrop {
     margin-top: 21px;
   }
   .hero-deck {
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 20px;
     max-width: 305px;
   }
@@ -1218,29 +1218,29 @@ dialog::backdrop {
     gap: 20px;
   }
   .button {
-    font-size: 11px;
+    font-size: 14px;
     gap: 29px;
     min-height: 46px;
     padding: 11px 17px;
   }
   .reading-time {
-    font-size: 8px;
+    font-size: 14px;
   }
   .figure-top {
-    font-size: 7px;
+    font-size: 14px;
     letter-spacing: 0.8px;
     margin-bottom: 10px;
   }
   figcaption {
-    font-size: 8px;
+    font-size: 14px;
     gap: 6px;
     margin-top: 13px;
   }
   .poster-note {
-    font-size: 8px;
+    font-size: 14px;
   }
   .enlarge-hint {
-    font-size: 8px;
+    font-size: 14px;
     padding: 6px 9px;
     bottom: 9px;
     right: 9px;
@@ -1249,7 +1249,7 @@ dialog::backdrop {
     padding: 13px 12px 19px !important;
   }
   .index-top {
-    font-size: 8px;
+    font-size: 14px;
     letter-spacing: 0.7px;
   }
   .index-top > span {
@@ -1271,14 +1271,14 @@ dialog::backdrop {
     white-space: normal;
   }
   .index-question {
-    font-size: 9px;
+    font-size: 14px;
     margin-top: 6px;
   }
   .section-kicker .fine-text {
-    font-size: 9px;
+    font-size: 14px;
   }
   .eyebrow {
-    font-size: 9px;
+    font-size: 14px;
     letter-spacing: 1.1px;
   }
   .thesis {
@@ -1297,7 +1297,7 @@ dialog::backdrop {
     font-size: 27px;
   }
   .thesis-body > div {
-    font-size: 13px;
+    font-size: 14px;
   }
   .reading-note {
     gap: 14px;
@@ -1305,7 +1305,7 @@ dialog::backdrop {
     padding-top: 20px;
   }
   .reading-note p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .reading-nav nav {
     width: calc(100% - 28px);
@@ -1315,7 +1315,7 @@ dialog::backdrop {
   .reading-nav a {
     flex-direction: column;
     gap: 4px;
-    font-size: 8px;
+    font-size: 14px;
     line-height: 1.1;
   }
   .reading-nav a > span:first-child {
@@ -1338,7 +1338,7 @@ dialog::backdrop {
     font-size: 26px;
   }
   .chapter-meta .eyebrow {
-    font-size: 9px;
+    font-size: 14px;
   }
   .vignette {
     padding: 23px 22px;
@@ -1354,7 +1354,7 @@ dialog::backdrop {
     font-size: 30px;
   }
   .prose .counterpoint {
-    font-size: 12px;
+    font-size: 14px;
   }
   .chapter-pull {
     font-size: 32px;
@@ -1373,7 +1373,7 @@ dialog::backdrop {
     font-size: 24px;
   }
   .afterword-bottom p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .companion-heading {
     display: block;
@@ -1388,27 +1388,27 @@ dialog::backdrop {
     display: none;
   }
   summary {
-    font-size: 13px;
+    font-size: 14px;
     gap: 15px;
     padding-block: 23px;
   }
   summary small {
-    font-size: 7px;
+    font-size: 14px;
     letter-spacing: 0.8px;
   }
   .note-body {
     padding-inline: 25px 10px;
-    font-size: 12px;
+    font-size: 14px;
   }
   .footer .brand {
     gap: 9px;
   }
   .footer p {
-    font-size: 9px;
+    font-size: 14px;
   }
   .footer > div a,
   .text-button {
-    font-size: 9px;
+    font-size: 14px;
   }
   dialog {
     padding: 16px 12px 12px;
@@ -1427,14 +1427,14 @@ dialog::backdrop {
   }
   .dialog-toolbar button,
   .dialog-toolbar a {
-    font-size: 11px;
+    font-size: 14px;
   }
   .poster-viewport,
   .poster-viewport img {
     max-height: calc(96dvh - 155px);
   }
   .dialog-caption {
-    font-size: 9px;
+    font-size: 14px;
     line-height: 1.5;
   }
   .poster-viewport.is-zoomed img {
@@ -1495,10 +1495,10 @@ dialog::backdrop {
     font-size: 23px;
   }
   .hero-deck {
-    font-size: 10px;
+    font-size: 14px;
   }
   .figure-top {
-    font-size: 6px;
+    font-size: 14px;
   }
   .thesis {
     padding-block: 30px;
@@ -1633,7 +1633,7 @@ dialog::backdrop {
   align-items: center;
   padding: 7px 10px;
   min-height: 32px;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.5;
 }
 .language-switch a[aria-current="page"] {
@@ -1740,5 +1740,140 @@ html:lang(zh) .thesis-body > div {
   html:lang(zh) .thesis h2,
   html:lang(zh) .afterword h2 {
     font-size: 32px;
+  }
+}
+
+/* Comfortable reading sizes in both language editions. */
+@media screen {
+  .age-index {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .index-entry {
+    min-width: 0;
+  }
+  .hero-deck,
+  html:lang(zh) .hero-deck,
+  .thesis-body > div,
+  html:lang(zh) .thesis-body > div,
+  .reading-note p,
+  .prose .counterpoint,
+  .afterword-bottom p,
+  .companion-heading > p:not(.eyebrow),
+  .note-body,
+  .note-body a,
+  .footer p {
+    font-size: 16px;
+  }
+  .prose {
+    font-size: 18px;
+  }
+  summary {
+    font-size: 17px;
+  }
+  summary small {
+    line-height: 1.6;
+  }
+  .masthead nav {
+    margin-right: 0;
+    gap: 24px;
+  }
+  .figure-top,
+  figcaption,
+  .section-kicker {
+    flex-wrap: wrap;
+    gap: 8px 18px;
+  }
+  .figure-top,
+  .poster-note,
+  figcaption {
+    line-height: 1.7;
+  }
+  .hero-actions {
+    flex-wrap: wrap;
+  }
+  .reading-time {
+    letter-spacing: 0.4px;
+  }
+  .index-top,
+  .chapter-meta {
+    gap: 12px;
+  }
+  .index-top {
+    flex-wrap: wrap;
+  }
+  .language-switch a {
+    min-height: 38px;
+  }
+  .footer,
+  .footer > div,
+  .dialog-toolbar > div {
+    flex-wrap: wrap;
+  }
+  .footer > div {
+    gap: 12px 20px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .age-index {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .reading-nav-label {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .index-top > span {
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  .masthead nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    scroll-padding-top: 116px;
+  }
+  .masthead {
+    flex-wrap: wrap;
+    padding-block: 16px;
+    gap: 14px;
+  }
+  .brand {
+    gap: 8px;
+  }
+  .brand > span:last-child {
+    letter-spacing: 0.6px;
+  }
+  .language-switch {
+    margin-left: auto;
+  }
+  .language-switch a {
+    padding: 6px 8px;
+  }
+  .reading-nav nav {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 28px;
+    gap: 0 10px;
+    padding-block: 7px;
+  }
+  .reading-nav a {
+    flex-direction: row;
+    min-width: 0;
+    min-height: 40px;
+    gap: 7px;
+    line-height: 1.4;
+  }
+  .reading-nav .chapter-link-name {
+    overflow-wrap: anywhere;
+  }
+  .reading-nav .back-top {
+    grid-column: 3;
+    grid-row: 1 / 3;
+    justify-content: center;
+  }
+  .dialog-toolbar > div {
+    gap: 8px 14px;
   }
 }
