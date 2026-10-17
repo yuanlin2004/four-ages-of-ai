@@ -867,6 +867,90 @@ dialog::backdrop {
   margin-top: 12px;
   color: var(--muted);
 }
+.song {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 6%;
+  align-items: center;
+  padding-block: 88px 24px;
+}
+.song h2 {
+  font: 55px/1.05 var(--serif);
+  margin: 20px 0 22px;
+}
+.song h2 em {
+  color: var(--accent);
+}
+.song-copy > p:not(.eyebrow, .fine-text) {
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 60ch;
+}
+.song-lyric {
+  font: 25px/1.6 var(--serif);
+  border-left: 2px solid var(--accent);
+  margin: 28px 0 10px;
+  padding-left: 22px;
+}
+.song-video {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 18px;
+  aspect-ratio: 16 / 9;
+  background: #293a30;
+  color: #f0f1e5;
+  text-decoration: none;
+  overflow: hidden;
+}
+.song-video:hover .song-play,
+.song-video:focus-visible .song-play {
+  background: var(--accent);
+}
+.song-play {
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  border: 1px solid #c8d5ae;
+  border-radius: 50%;
+  font-size: 26px;
+  padding-left: 5px;
+  transition: background 0.2s;
+}
+.song-video-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.song-video-label small {
+  font-size: 12px;
+  font-weight: 400;
+  color: #c9d3bd;
+}
+.song-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+@media (max-width: 800px) {
+  .song {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-block: 54px 12px;
+  }
+  .song h2 {
+    font-size: 44px;
+  }
+}
 @media (min-width: 1600px) {
   .hero {
     padding-block: 80px;

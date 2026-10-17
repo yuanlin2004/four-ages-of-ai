@@ -134,6 +134,22 @@
     });
   }
 
+  document.querySelectorAll("[data-video-id]").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
+        return;
+      event.preventDefault();
+      const frame = document.createElement("iframe");
+      frame.src = `https://www.youtube-nocookie.com/embed/${link.dataset.videoId}?autoplay=1`;
+      frame.title = link.dataset.videoTitle;
+      frame.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+      frame.allowFullscreen = true;
+      link.replaceChildren(frame);
+      link.removeAttribute("href");
+      frame.focus();
+    }, { once: true });
+  });
+
   const printButton = document.querySelector("#print-essay");
   printButton.hidden = false;
   printButton.addEventListener("click", () => window.print());
