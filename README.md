@@ -39,7 +39,8 @@ styles.css                 Responsive design and print styles
 script.js                  Reading position, poster zoom, and print enhancements
 .nojekyll                  GitHub Pages static-site marker
 assets/
-  four-ages-poster.png      Original poster, 1536 × 1024 pixels
+  four-ages-poster.png      Original English poster, 1536 × 1024 pixels
+  four-ages-poster-zh.png   Original Chinese poster, 1536 × 1024 pixels
   favicon.svg              Small browser icon
   fonts/                   Local fonts and their OFL licenses
 tools/check_site.py        Dependency-free link and asset check
@@ -61,7 +62,7 @@ There are no analytics, cookies, accounts, external runtime scripts, or font-ser
 
 The English/中文 controls in the header and footer link directly between the two editions. With JavaScript enabled, switching retains the current chapter or section. Both pages remain readable and switchable without JavaScript. Chinese reading time is estimated by character count, and poster controls use the page language.
 
-Both editions currently use the original English poster. The Chinese page labels it as the English original. To supply a Chinese poster later, add the original image under `assets/`, then update the poster image links, both image elements, sharing image metadata, dimensions, and labels in `zh.html`. The English edition can retain its own poster.
+Each edition uses its own supplied original poster. The English page uses `assets/four-ages-poster.png`; the Chinese page uses `assets/four-ages-poster-zh.png`. Each page points its display, zoom viewer, downloads, and sharing image metadata to the corresponding asset. Both images retain their original resolution and aspect ratio.
 
 English display fonts are bundled; Chinese text uses available system serif and sans-serif fonts, with no runtime font download.
 
