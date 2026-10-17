@@ -2,6 +2,34 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
+    <script>
+      // Links into the earlier single-page edition point at sections that now have their own pages.
+      (() => {
+        const pages = {
+          mirror: "mirror",
+          surrender: "surrender",
+          irrelevance: "irrelevance",
+          becoming: "becoming",
+          afterword: "becoming",
+          song: "song",
+          "another-perspective": "perspective",
+          notes: "notes",
+        };
+        const prefix = "zh-";
+        function redirect() {
+          const id = decodeURIComponent(window.location.hash.slice(1));
+          const section = id.replace(/-title$/, "");
+          const page = id.startsWith("note-") ? "notes" : pages[section];
+          if (!page) return;
+          const keepHash = id !== section || !(id in pages) || id === "afterword";
+          window.location.replace(
+            `${prefix}${page}.html${keepHash ? `#${id}` : ""}`,
+          );
+        }
+        redirect();
+        window.addEventListener("hashchange", redirect);
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f5f2eb" />
     <title>人工智能的四个时代——人类会迷失自己吗？又能否重新发现自己？</title>
@@ -53,7 +81,7 @@
     <link rel="stylesheet" href="styles.css?v=d64858b2" />
     <script src="script.js" defer></script>
   </head>
-  <body id="top" data-home>
+  <body id="top">
     <a class="skip-link" href="#main">跳至正文</a>
     <header class="masthead wrap">
       <a class="brand" href="zh.html" aria-label="人工智能的四个时代——首页"

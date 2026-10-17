@@ -43,7 +43,7 @@ perspective.html           Comparison with RooAGI's four stages
 notes.html                 The eight research notes
 zh.html, zh-*.html         Simplified Chinese edition of each page above
 styles.css                 Responsive design and print styles
-script.js                  Reading progress, old-link redirects, poster zoom, and print
+script.js                  Reading progress, poster zoom, and print
 .nojekyll                  GitHub Pages static-site marker
 assets/
   four-ages-poster.png      Original English poster, 1536 × 1024 pixels
@@ -57,11 +57,11 @@ THIRD_PARTY.md             Font attribution and asset provenance
 
 ## Editing
 
-Each English page has a Chinese counterpart with a `zh-` prefix (`index.html` pairs with `zh.html`). Edit both when changing content. The masthead, footer, and page-turn links are repeated on every page, so a change to them goes into all sixteen files. Shared styles and interactions live in `styles.css` and `script.js`. Keep corresponding IDs the same in both languages so the language switch keeps the reader's place. Links from the earlier single-page edition, such as `index.html#surrender` or `zh.html#note-work`, are redirected to the matching page by `script.js`. The eight expandable research notes distinguish technical foundations, empirical findings, and interpretation. All four opening scenes are explicitly fictional, and the dates in the artwork are treated as scenario labels. Each chapter also has a dark “Through the Black Mirror” panel (`.screen-note`) that pairs the age with episodes of the series; note 07 marks them as fiction used for thought experiments.
+Each English page has a Chinese counterpart with a `zh-` prefix (`index.html` pairs with `zh.html`). Edit both when changing content. The masthead, footer, and page-turn links are repeated on every page, so a change to them goes into all sixteen files. Shared styles and interactions live in `styles.css` and `script.js`. Keep corresponding IDs the same in both languages so the language switch keeps the reader's place. Links from the earlier single-page edition, such as `index.html#surrender` or `zh.html#note-work`, are redirected to the matching page by a small script at the top of `index.html` and `zh.html`. The eight expandable research notes distinguish technical foundations, empirical findings, and interpretation. All four opening scenes are explicitly fictional, and the dates in the artwork are treated as scenario labels. Each chapter also has a dark “Through the Black Mirror” panel (`.screen-note`) that pairs the age with episodes of the series; note 07 marks them as fiction used for thought experiments.
 
 Change the paper, ink, and four chapter colors in the `:root` variables at the top of `styles.css`. The layout adapts to small screens; the chapter strip stays available while reading. The poster is never cropped, and its viewer supports keyboard dismissal, zoom, a full-resolution link, and a direct download.
 
-The complete essay and links remain usable without JavaScript. JavaScript adds reading progress, old-link redirects, in-page enlargement, and the print control. “Print this page” uses the browser's print dialog, with an option to save as PDF; research notes open automatically for printing.
+The complete essay and links remain usable without JavaScript. JavaScript adds reading progress, in-page enlargement, and the print control. “Print this page” uses the browser's print dialog, with an option to save as PDF; research notes open automatically for printing.
 
 There are no analytics, cookies, accounts, external runtime scripts, or font-service requests. Research links open external source pages only when followed. The song video loads from YouTube only when someone presses play.
 

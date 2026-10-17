@@ -4,28 +4,6 @@
   const labels = isChinese
     ? { zoomIn: "放大 +", fit: "适应屏幕 −" }
     : { zoomIn: "Zoom in +", fit: "Fit to screen −" };
-  // Older links pointed at sections of the single-page edition; send them to their new pages.
-  if (document.body.hasAttribute("data-home") && window.location.hash) {
-    const id = decodeURIComponent(window.location.hash.slice(1));
-    const pages = {
-      mirror: "mirror",
-      surrender: "surrender",
-      irrelevance: "irrelevance",
-      becoming: "becoming",
-      afterword: "becoming",
-      song: "song",
-      "another-perspective": "perspective",
-      notes: "notes",
-    };
-    const page = id.startsWith("note-") ? "notes" : pages[id];
-    if (page) {
-      const keepHash = id === "afterword" || id.startsWith("note-");
-      window.location.replace(
-        `${isChinese ? "zh-" : ""}${page}.html${keepHash ? `#${id}` : ""}`,
-      );
-      return;
-    }
-  }
   document.querySelectorAll("[data-language-switch]").forEach((link) => {
     link.addEventListener("click", () => {
       const destination = new URL(

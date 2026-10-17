@@ -2,6 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <script>
+      // Links into the earlier single-page edition point at sections that now have their own pages.
+      (() => {
+        const pages = {
+          mirror: "mirror",
+          surrender: "surrender",
+          irrelevance: "irrelevance",
+          becoming: "becoming",
+          afterword: "becoming",
+          song: "song",
+          "another-perspective": "perspective",
+          notes: "notes",
+        };
+        const prefix = "";
+        function redirect() {
+          const id = decodeURIComponent(window.location.hash.slice(1));
+          const section = id.replace(/-title$/, "");
+          const page = id.startsWith("note-") ? "notes" : pages[section];
+          if (!page) return;
+          const keepHash = id !== section || !(id in pages) || id === "afterword";
+          window.location.replace(
+            `${prefix}${page}.html${keepHash ? `#${id}` : ""}`,
+          );
+        }
+        redirect();
+        window.addEventListener("hashchange", redirect);
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f5f2eb" />
     <title>The Four Ages of AI — How Humanity Could Lose—and Rediscover—Itself</title>
@@ -53,7 +81,7 @@
     <link rel="stylesheet" href="styles.css?v=d64858b2" />
     <script src="script.js" defer></script>
   </head>
-  <body id="top" data-home>
+  <body id="top">
     <a class="skip-link" href="#main">Skip to the content</a>
     <header class="masthead wrap">
       <a class="brand" href="index.html" aria-label="The Four Ages of AI — home"
