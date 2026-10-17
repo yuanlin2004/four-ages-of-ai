@@ -2,7 +2,7 @@
 
 **How Humanity Lost—and Rediscovered—Itself**
 
-A complete, English-only editorial website about authenticity, agency, purpose, and human reinvention. This is a standalone GitHub Pages-ready edition based on `OUR_PERSPECTIVE.md`, `ATTACK_PLAN.md`, and the supplied original poster.
+A complete English and Simplified Chinese editorial website about authenticity, agency, purpose, and human reinvention. This is a standalone GitHub Pages-ready edition based on `OUR_PERSPECTIVE.md`, `ATTACK_PLAN.md`, and the supplied original poster.
 
 ## Run locally
 
@@ -28,12 +28,13 @@ All local assets use relative paths, so the site works at a domain root or under
 
 Official instructions: [Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site).
 
-Social sharing metadata and the canonical link point to <https://yuanlin2004.github.io/four-ages-of-ai/>. If you move the site to another repository or domain, update these URLs in `index.html`.
+Each language has its own canonical URL and sharing metadata. English is at <https://yuanlin2004.github.io/four-ages-of-ai/> and Chinese is at <https://yuanlin2004.github.io/four-ages-of-ai/zh.html>. Alternate-language metadata connects both editions. If you move the site to another repository or domain, update these URLs in both HTML files.
 
 ## What is included
 
 ```text
-index.html                 Canonical essay, layout, metadata, and research notes
+index.html                 English essay, layout, metadata, and research notes
+zh.html                    Complete Simplified Chinese edition
 styles.css                 Responsive design and print styles
 script.js                  Reading position, poster zoom, and print enhancements
 .nojekyll                  GitHub Pages static-site marker
@@ -48,13 +49,21 @@ THIRD_PARTY.md             Font attribution and asset provenance
 
 ## Editing
 
-Edit the essay directly in `index.html`; it is the single content source. The five expandable research notes distinguish technical foundations, empirical findings, and interpretation. All four opening scenes are explicitly fictional, and the dates in the artwork are treated as scenario labels.
+Edit the English essay in `index.html` and its Chinese counterpart in `zh.html`. Shared styles and interactions live in `styles.css` and `script.js`. Keep corresponding section IDs the same so language switching retains the current chapter. The five expandable research notes distinguish technical foundations, empirical findings, and interpretation. All four opening scenes are explicitly fictional, and the dates in the artwork are treated as scenario labels.
 
 Change the paper, ink, and four chapter colors in the `:root` variables at the top of `styles.css`. The layout adapts to small screens; the chapter strip stays available while reading. The poster is never cropped, and its viewer supports keyboard dismissal, zoom, a full-resolution link, and a direct download.
 
 The complete essay and links remain usable without JavaScript. JavaScript adds reading progress, automatic reading time, in-page enlargement, and the print control. “Print essay” uses the browser's print dialog, with an option to save as PDF; research notes open automatically for printing.
 
 There are no analytics, cookies, accounts, external runtime scripts, or font-service requests. Research links open external source pages only when followed.
+
+## Language switching and posters
+
+The English/中文 controls in the header and footer link directly between the two editions. With JavaScript enabled, switching retains the current chapter or section. Both pages remain readable and switchable without JavaScript. Chinese reading time is estimated by character count, and poster controls use the page language.
+
+Both editions currently use the original English poster. The Chinese page labels it as the English original. To supply a Chinese poster later, add the original image under `assets/`, then update the poster image links, both image elements, sharing image metadata, dimensions, and labels in `zh.html`. The English edition can retain its own poster.
+
+English display fonts are bundled; Chinese text uses available system serif and sans-serif fonts, with no runtime font download.
 
 ## Check changes
 

@@ -1619,3 +1619,126 @@ dialog::backdrop {
     box-shadow: none;
   }
 }
+
+/* Language selection and Chinese typography. */
+.language-switch {
+  display: flex;
+  flex-shrink: 0;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--line);
+}
+.language-switch a {
+  display: flex;
+  align-items: center;
+  padding: 7px 10px;
+  min-height: 32px;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.language-switch a[aria-current="page"] {
+  background: var(--ink);
+  color: var(--paper);
+}
+.language-switch a:hover:not([aria-current]) {
+  background: #e9e5da;
+}
+html:lang(zh) {
+  --serif: "Songti SC", "Noto Serif CJK SC", "STSong", "SimSun", serif;
+  --sans:
+    "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+}
+html:lang(zh) .brand-mark,
+html:lang(zh) .chapter-numeral {
+  font-family: Instrument, Georgia, serif;
+}
+html:lang(zh) h1 {
+  font-size: clamp(58px, 5.7vw, 90px);
+  line-height: 1.22;
+  letter-spacing: 0.01em;
+}
+html:lang(zh) em {
+  font-style: normal;
+}
+html:lang(zh) .subtitle {
+  font-size: clamp(23px, 2vw, 30px);
+  line-height: 1.6;
+}
+html:lang(zh) .prose {
+  font-family: var(--serif);
+  line-height: 2;
+}
+html:lang(zh) .prose h3 {
+  font-size: 27px;
+  line-height: 1.6;
+}
+html:lang(zh) .vignette p:not(.eyebrow) {
+  font-size: 22px;
+  line-height: 1.85;
+}
+html:lang(zh) .chapter-question,
+html:lang(zh) .chapter-pull {
+  font-size: 30px;
+  line-height: 1.65;
+}
+html:lang(zh) .chapter h2 {
+  font-size: clamp(40px, 4vw, 58px);
+  line-height: 1.3;
+}
+html:lang(zh) .index-name {
+  font-size: 25px;
+  line-height: 1.5;
+}
+html:lang(zh) .thesis h2,
+html:lang(zh) .afterword h2 {
+  font-size: clamp(32px, 4.5vw, 65px);
+  line-height: 1.5;
+}
+html:lang(zh) .thesis-body .lead {
+  font-size: 25px;
+  line-height: 1.75;
+}
+html:lang(zh) .afterword-lead {
+  font-size: 24px;
+  line-height: 1.8;
+}
+html:lang(zh) .companion h2 {
+  font-size: 42px;
+  line-height: 1.55;
+}
+html:lang(zh) .note-body,
+html:lang(zh) .counterpoint,
+html:lang(zh) .thesis-body > div {
+  line-height: 2;
+}
+@media (max-width: 600px) {
+  .masthead nav {
+    display: none;
+  }
+  .language-switch a {
+    padding: 6px 9px;
+  }
+  html:lang(zh) .index-name {
+    font-size: 22px;
+  }
+  html:lang(zh) .chapter-pull,
+  html:lang(zh) .chapter-question {
+    font-size: 26px;
+  }
+  html:lang(zh) .hero-deck,
+  html:lang(zh) .thesis-body > div {
+    font-size: 14px;
+  }
+}
+@media print {
+  .language-switch {
+    display: none;
+  }
+  html:lang(zh) h1 {
+    font-size: 40px;
+  }
+  html:lang(zh) .thesis h2,
+  html:lang(zh) .afterword h2 {
+    font-size: 32px;
+  }
+}

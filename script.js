@@ -1,14 +1,43 @@
 /* Reading enhancements. The essay, navigation, notes, and original image work without JavaScript. */
 (() => {
+  const isChinese = document.documentElement.lang.startsWith("zh");
+  const labels = isChinese
+    ? { zoomIn: "放大 +", fit: "适应屏幕 −" }
+    : { zoomIn: "Zoom in +", fit: "Fit to screen −" };
+  let lastReadChapter = null;
+  document.querySelectorAll("[data-language-switch]").forEach((link) => {
+    link.addEventListener("click", () => {
+      const current = document.querySelector(
+        '[data-chapter][aria-current="location"]',
+      )?.dataset.chapter;
+      const destination = new URL(
+        link.getAttribute("href"),
+        window.location.href,
+      );
+      const hash = window.location.hash;
+      const isOtherSection =
+        hash &&
+        !["#mirror", "#surrender", "#irrelevance", "#becoming"].includes(hash);
+      destination.hash =
+        current || (isOtherSection ? hash : lastReadChapter || hash);
+      link.href = destination.href;
+    });
+  });
   const essay = document.querySelector(".essay");
   const readingTime = document.querySelector("#reading-time");
-  const wordCount = [
+  const readingText = [
     ...document.querySelectorAll(".thesis, .essay, .afterword"),
   ]
     .map((section) => section.textContent.trim())
-    .join(" ")
-    .split(/\s+/).length;
-  readingTime.textContent = `${Math.max(1, Math.ceil(wordCount / 200))} MIN`;
+    .join(" ");
+  const readingUnits = isChinese
+    ? (readingText.match(/[\u3400-\u9fff]/g) || []).length
+    : readingText.split(/\s+/).length;
+  const minutes = Math.max(
+    1,
+    Math.ceil(readingUnits / (isChinese ? 450 : 200)),
+  );
+  readingTime.textContent = isChinese ? `${minutes} 分钟` : `${minutes} MIN`;
 
   const chapters = [...document.querySelectorAll(".chapter")];
   const chapterLinks = [...document.querySelectorAll("[data-chapter]")];
@@ -27,6 +56,7 @@
       if (chapter.getBoundingClientRect().top <= 160) current = chapter.id;
     }
     if (essay.getBoundingClientRect().bottom < 100) current = null;
+    if (current) lastReadChapter = current;
     chapterLinks.forEach((link) => {
       if (link.dataset.chapter === current)
         link.setAttribute("aria-current", "location");
@@ -92,14 +122,14 @@
     });
     zoom.addEventListener("click", () => {
       const enlarged = viewport.classList.toggle("is-zoomed");
-      zoom.textContent = enlarged ? "Fit to screen −" : "Zoom in +";
+      zoom.textContent = enlarged ? labels.fit : labels.zoomIn;
       zoom.setAttribute("aria-pressed", String(enlarged));
       viewport.scrollTo(0, 0);
     });
     dialog.addEventListener("close", () => {
       document.body.classList.remove("dialog-open");
       viewport.classList.remove("is-zoomed");
-      zoom.textContent = "Zoom in +";
+      zoom.textContent = labels.zoomIn;
       zoom.setAttribute("aria-pressed", "false");
     });
   }

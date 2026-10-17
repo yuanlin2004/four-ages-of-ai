@@ -18,6 +18,7 @@ class Page(HTMLParser):
         self.urls = []
         self.idrefs = []
         self.headings = 0
+        self.language = None
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
@@ -32,20 +33,26 @@ class Page(HTMLParser):
             errors.append("An image is missing descriptive alt text")
         if tag == "h1":
             self.headings += 1
-        if tag == "html" and attrs.get("lang") != "en":
-            errors.append("The page language must be en")
+        if tag == "html":
+            self.language = attrs.get("lang")
 
 
-page = Page()
-page.feed((ROOT / "index.html").read_text(encoding="utf-8"))
-for key, count in Counter(page.ids).items():
-    if count > 1:
-        errors.append(f"Duplicate id: {key}")
-if page.headings != 1:
-    errors.append(f"Expected one main heading, found {page.headings}")
-for key in page.idrefs:
-    if key not in page.ids:
-        errors.append(f"Missing accessibility target: {key}")
+pages = {}
+for filename, language in [("index.html", "en"), ("zh.html", "zh-CN")]:
+    source = ROOT / filename
+    page = Page()
+    page.feed(source.read_text(encoding="utf-8"))
+    pages[source] = page
+    if page.language != language:
+        errors.append(f"{filename}: expected language {language}, found {page.language}")
+    for key, count in Counter(page.ids).items():
+        if count > 1:
+            errors.append(f"{filename}: duplicate id: {key}")
+    if page.headings != 1:
+        errors.append(f"{filename}: expected one main heading, found {page.headings}")
+    for key in page.idrefs:
+        if key not in page.ids:
+            errors.append(f"{filename}: missing accessibility target: {key}")
 
 
 def check_url(url, source):
@@ -60,12 +67,13 @@ def check_url(url, source):
         errors.append(f"Local reference escapes the site folder: {url}")
     elif not target.exists():
         errors.append(f"Missing local file: {url}")
-    elif parts.fragment and target == ROOT / "index.html" and unquote(parts.fragment) not in page.ids:
+    elif parts.fragment and target in pages and unquote(parts.fragment) not in pages[target].ids:
         errors.append(f"Missing anchor: {url}")
 
 
-for url in page.urls:
-    check_url(url, ROOT / "index.html")
+for source, page in pages.items():
+    for url in page.urls:
+        check_url(url, source)
 css = (ROOT / "styles.css").read_text(encoding="utf-8")
 for url in re.findall(r"url\(['\"]?([^)'\"]+)", css):
     check_url(url, ROOT / "styles.css")
@@ -75,4 +83,4 @@ if not (ROOT / ".nojekyll").is_file():
 if errors:
     print("Site checks failed:\n" + "\n".join(f"- {error}" for error in errors))
     sys.exit(1)
-print(f"PASS: {len(page.urls)} HTML references, CSS assets, {len(page.ids)} unique IDs, accessibility targets, and Pages-relative paths.")
+print(f"PASS: {len(pages)} language editions, {sum(len(page.urls) for page in pages.values())} HTML references, CSS assets, accessibility targets, and Pages-relative paths.")

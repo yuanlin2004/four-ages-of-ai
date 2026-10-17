@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f2eb" />
+    <title>人工智能的四个时代——人类如何迷失，又如何重新发现自己</title>
+    <meta
+      name="description"
+      content="一篇以人为中心的四幕叙事：镜像、让渡、无用与重塑。关于真实、自主、意义与何以为人的追问。"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="人工智能的四个时代" />
+    <meta
+      property="og:description"
+      content="人类如何迷失，又如何重新发现自己。以四种视角追问，AI 将如何改变人的生活与自我理解。"
+    />
+    <meta
+      property="og:image"
+      content="https://yuanlin2004.github.io/four-ages-of-ai/assets/four-ages-poster.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="四幅关于人的场景：镜像时代、让渡时代、无用时代与重塑时代。"
+    />
+    <meta property="og:locale" content="zh_CN" />
+    <meta
+      property="og:url"
+      content="https://yuanlin2004.github.io/four-ages-of-ai/zh.html"
+    />
+    <link
+      rel="canonical"
+      href="https://yuanlin2004.github.io/four-ages-of-ai/zh.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://yuanlin2004.github.io/four-ages-of-ai/"
+    />
+    <link
+      rel="alternate"
+      hreflang="zh-CN"
+      href="https://yuanlin2004.github.io/four-ages-of-ai/zh.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://yuanlin2004.github.io/four-ages-of-ai/"
+    />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">跳至正文</a>
+    <header class="masthead wrap">
+      <a class="brand" href="#top" aria-label="人工智能的四个时代——首页"
+        ><span class="brand-mark" aria-hidden="true">iv.</span
+        ><span
+          >人工智能的<br />
+          四个时代</span
+        ></a
+      >
+      <nav aria-label="主导航">
+        <a href="#thesis">核心命题</a><a href="#ages">四个时代</a
+        ><a href="#poster">海报 <span aria-hidden="true">↗</span></a>
+      </nav>
+      <div class="language-switch" role="group" aria-label="Language / 语言">
+        <a href="index.html" lang="en" hreflang="en" data-language-switch
+          >English</a
+        >
+        <a href="zh.html" lang="zh-CN" hreflang="zh-CN" aria-current="page"
+          >中文</a
+        >
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero wrap" aria-labelledby="title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="small-star" aria-hidden="true">✳</span>
+            技术在变，我们也在变。
+          </p>
+          <h1 id="title">
+            人工智能<br />
+            <em>四个</em>时代<span class="title-dot"></span>
+          </h1>
+          <p class="subtitle">
+            人类如何迷失，<br />
+            又如何重新发现自己
+          </p>
+          <p class="hero-deck">
+            从真实、自主、意义出发，<br class="desktop-break" />
+            走向那个尚未完成的问题：何以为人。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#thesis"
+              >开始阅读 <span aria-hidden="true">↓</span></a
+            ><span class="reading-time"
+              >四幕 · 约 <span id="reading-time">10 分钟</span> 阅读</span
+            >
+          </div>
+        </div>
+        <figure class="hero-art" id="poster">
+          <div class="figure-top">
+            <span>人的处境</span><span>图 01 / 四种可能的时代</span>
+          </div>
+          <a
+            class="poster-link"
+            href="assets/four-ages-poster.png"
+            data-open-poster
+            aria-label="放大人工智能的四个时代海报"
+          >
+            <img
+              src="assets/four-ages-poster.png"
+              width="1536"
+              height="1024"
+              fetchpriority="high"
+              alt="英文原版海报《人工智能的四个时代》。镜像：一名女性面对自己的数字形象；让渡：一个人将生活交给 AI 助手；无用：自动化城市中的劳动者；重塑：不同世代共同望向开放的未来。"
+            />
+            <span class="enlarge-hint" aria-hidden="true"
+              >放大海报 <span>↗</span></span
+            >
+          </a>
+          <figcaption>
+            <span>同一个文明，四个关于我们自己的问题。</span
+            ><a
+              href="assets/four-ages-poster.png"
+              download="the-four-ages-of-ai.png"
+              >英文原版海报 <span aria-hidden="true">↓</span></a
+            >
+          </figcaption>
+          <p class="poster-note">海报中的年代是想象的时间尺度，并非预测。</p>
+        </figure>
+      </section>
+
+      <nav class="age-index wrap" id="ages" aria-label="浏览四个时代">
+        <a class="index-entry mirror" href="#mirror"
+          ><span class="index-top"
+            >01 / 真实 <span aria-hidden="true">↗</span></span
+          ><span class="index-bottom"
+            ><svg class="age-symbol" viewbox="0 0 80 64" aria-hidden="true">
+              <circle cx="27" cy="32" r="23" />
+              <circle cx="52" cy="32" r="23" /></svg
+            ><span
+              ><span class="index-name">镜像时代</span
+              ><span class="index-question">什么才是真实？</span></span
+            ></span
+          ></a
+        >
+        <a class="index-entry surrender" href="#surrender"
+          ><span class="index-top"
+            >02 / 自主 <span aria-hidden="true">↗</span></span
+          ><span class="index-bottom"
+            ><svg class="age-symbol" viewbox="0 0 80 64" aria-hidden="true">
+              <circle cx="40" cy="32" r="27" />
+              <circle cx="40" cy="32" r="17" />
+              <circle cx="40" cy="32" r="6" class="solid" /></svg
+            ><span
+              ><span class="index-name">让渡时代</span
+              ><span class="index-question">由谁决定？</span></span
+            ></span
+          ></a
+        >
+        <a class="index-entry irrelevance" href="#irrelevance"
+          ><span class="index-top"
+            >03 / 意义 <span aria-hidden="true">↗</span></span
+          ><span class="index-bottom"
+            ><svg class="age-symbol" viewbox="0 0 80 64" aria-hidden="true">
+              <circle cx="40" cy="32" r="26" stroke-dasharray="3 5" />
+              <path d="M40 6v17m0 18v17M14 32h17m18 0h17" /></svg
+            ><span
+              ><span class="index-name">无用时代</span
+              ><span class="index-question">我们为何重要？</span></span
+            ></span
+          ></a
+        >
+        <a class="index-entry becoming" href="#becoming"
+          ><span class="index-top"
+            >04 / 重塑 <span aria-hidden="true">↗</span></span
+          ><span class="index-bottom"
+            ><svg class="age-symbol" viewbox="0 0 80 64" aria-hidden="true">
+              <path
+                d="M40 59V31C40 9 60 6 72 7c0 21-15 28-32 24C40 12 20 9 8 11c0 20 14 28 32 20"
+              />
+              <path d="M28 59h24" /></svg
+            ><span
+              ><span class="index-name">重塑时代</span
+              ><span class="index-question">我们将成为什么？</span></span
+            ></span
+          ></a
+        >
+      </nav>
+
+      <section class="thesis wrap" id="thesis" aria-labelledby="thesis-title">
+        <div class="section-kicker">
+          <span class="eyebrow">核心命题</span
+          ><span class="fine-text">一篇关于人类自我重塑的文章</span>
+        </div>
+        <h2 id="thesis-title">
+          我们教会机器思考。<br />
+          现在，我们将如何<br />
+          重新理解 <em>自己？</em>
+        </h2>
+        <div class="thesis-body">
+          <p class="lead">
+            在现代生活的很长一段时间里，我们把智力视为通往“有用”的通行证。学校培养它，职业奖励它，制度将它转化为权威。
+          </p>
+          <div>
+            <p>
+              当越来越多这样的能力可以被复制，会发生什么？变化并不止于职场。它触及我们写下的信、做出的选择、渴望获得的认可，以及我们用来解释人生为何值得的故事。
+            </p>
+            <p>
+              本文提出四个时代，作为理解这种变化的视角。每个时代都追问一种关于人的主张：
+              <strong
+                >这是我的声音；这是我的选择；这是我的贡献；这就是我。</strong
+              >
+            </p>
+          </div>
+        </div>
+        <aside class="reading-note">
+          <span aria-hidden="true">↳</span>
+          <p>
+            <strong>四种视角，而非一张时间表。</strong>
+            这些时代可能彼此重叠，在不同地方以不同方式展开，也可能从未如想象般到来。各章开头的场景均为虚构。本文邀请讨论，并不预言人类只有一种未来。
+          </p>
+        </aside>
+      </section>
+
+      <div class="reading-nav" aria-label="阅读进度">
+        <nav class="wrap" aria-label="章节导航">
+          <span class="reading-nav-label">四个时代</span
+          ><a href="#mirror" data-chapter="mirror"
+            ><span>I</span> <span class="chapter-link-name">镜像</span></a
+          ><a href="#surrender" data-chapter="surrender"
+            ><span>II</span> <span class="chapter-link-name">让渡</span></a
+          ><a href="#irrelevance" data-chapter="irrelevance"
+            ><span>III</span> <span class="chapter-link-name">无用</span></a
+          ><a href="#becoming" data-chapter="becoming"
+            ><span>IV</span> <span class="chapter-link-name">重塑</span></a
+          ><a class="back-top" href="#top" aria-label="回到顶部">↑</a>
+        </nav>
+        <div class="progress-track" aria-hidden="true">
+          <div id="reading-progress"></div>
+        </div>
+      </div>
+
+      <article class="essay" aria-label="人工智能的四个时代正文">
+        <section
+          class="chapter mirror wrap"
+          id="mirror"
+          aria-labelledby="mirror-title"
+        >
+          <header class="chapter-heading">
+            <div class="chapter-meta">
+              <span class="eyebrow">第一幕 / 真实</span
+              ><span class="chapter-numeral" aria-hidden="true">I</span>
+            </div>
+            <h2 id="mirror-title">镜像时代</h2>
+            <p class="chapter-subtitle">真实性的危机</p>
+            <p class="chapter-question">
+              当我们的表达<br />
+              可以被模仿，<br />
+              什么才是真实？
+            </p>
+            <a class="small-link" href="#surrender"
+              >下一幕：让渡时代 <span aria-hidden="true">↓</span></a
+            >
+          </header>
+          <div class="chapter-content">
+            <div class="vignette">
+              <p class="eyebrow">想象这样一个场景</p>
+              <p>
+                她请机器帮自己给父亲写一封信。那些话比她独自写出的任何文字都更温暖、更清晰，也更勇敢。父亲打来电话，哽咽着说，多年来第一次感到自己被理解了。
+              </p>
+              <p>情感是真实的。她却不再确定，那是谁的声音。</p>
+            </div>
+            <div class="prose">
+              <h3>当表达不再足以证明什么</h3>
+              <p>
+                一封信承载的不只是信息。它让人相信，有人曾停下来，挣扎过，回忆过，也做出过选择。当系统能够生成这些行为的外在痕迹，读信的人就更难确定，文字背后究竟发生了什么。
+              </p>
+              <p>
+                这并不意味着关系变得虚假。一个难以找到语言的人，也许终于能够开口。翻译、协作、借用他人的词句，一直都是人类表达的一部分。关键在于：写信者想表达什么，收信者相信什么，以及双方对这种交流有怎样的共识。
+              </p>
+              <p>
+                在课堂上，一篇流畅的文章可能不再说明学生真正理解了什么。在友谊里，一封完美的道歉信，也可能没有改变写信的人。制度需要明确：哪些过程值得重视，而不能假定，一个令人信服的结果就证明了原本想要奖励的努力与理解。
+              </p>
+              <h3>镜子向两个方向起作用</h3>
+              <p>
+                我们也可能开始为机器塑造自己：磨平不寻常的措辞，选择更容易被推荐的照片，把生活呈现成符合系统分类的样子。风险不仅在于合成表达，也在于人的表达逐渐收窄，只剩系统能够识别的部分。
+              </p>
+              <p>
+                真实不必等于未经工具介入。它也可以意味着：为自己说出的话负责，坦诚说明表达如何形成，并持续回应接收这些话的人。不同文化会以不同方式划定这些边界。
+              </p>
+              <p class="counterpoint">
+                <strong>另一条路。</strong>
+                工具可以帮助更多人找到声音；学校、创作者与社群则可以让创作过程更加可见。模仿得更好，本身既不能证明机器拥有主观体验，也不会让人的表达失去意义。
+              </p>
+            </div>
+            <blockquote class="chapter-pull">
+              如果词句是借来的，<br />
+              意义还能属于我们吗？
+            </blockquote>
+          </div>
+        </section>
+
+        <section
+          class="chapter surrender wrap"
+          id="surrender"
+          aria-labelledby="surrender-title"
+        >
+          <header class="chapter-heading">
+            <div class="chapter-meta">
+              <span class="eyebrow">第二幕 / 自主</span
+              ><span class="chapter-numeral" aria-hidden="true">II</span>
+            </div>
+            <h2 id="surrender-title">让渡时代</h2>
+            <p class="chapter-subtitle">自主性的侵蚀</p>
+            <p class="chapter-question">
+              当选择<br />
+              不再是必需，<br />
+              自由意味着什么？
+            </p>
+            <a class="small-link" href="#irrelevance"
+              >下一幕：无用时代 <span aria-hidden="true">↓</span></a
+            >
+          </header>
+          <div class="chapter-content">
+            <div class="vignette">
+              <p class="eyebrow">想象这样一个场景</p>
+              <p>
+                他的助手重新安排会议，协商账单，还找到一门课程，帮他换上了更好的工作。他有了更多时间，也更少后悔。一天晚上，他关掉助手，试着规划下一年。
+              </p>
+              <p>没有什么阻止他自己选择。他却已经不知道该从哪里开始。</p>
+            </div>
+            <div class="prose">
+              <h3>选择与判断之间，那段悄然拉开的距离</h3>
+              <p>
+                委托本是日常。我们依赖同事、工具与制度，因为一个完全不借助他人的人生，能够展开的空间会更小。替人处理琐事的助手，也可能为更重要的决定腾出余地。
+              </p>
+              <p>
+                但自主性不止是一个标着“同意”的按钮。我们需要足够的理解，才能质疑建议；需要足够的练习，才能形成自己的判断；也需要真实的权力，让拒绝产生作用。当这些能力消失，便利就会变成依赖。
+              </p>
+              <p>
+                AI
+                智能体将模型的输出连接到能够行动的工具。一个建议，可以直接变成预订、购买，或某项记录的修改。因此，权限边界与行动前的复核机会，也成了日常权力如何分配的一部分。
+                <a
+                  class="citation"
+                  href="#note-agents"
+                  aria-label="查看智能体技术注释"
+                  >[2]</a
+                >
+              </p>
+              <h3>谁的偏好成了默认选项？</h3>
+              <p>
+                一个优化生活的系统，总要以某种目标为标准。用户表达的愿望、雇主设定的指标、平台追求的商业利益，可能指向不同方向。如果系统的前提难以看清，即使帮助确实有效，也可能掩盖权力的转移。
+              </p>
+              <p>
+                一项针对知识工作者的调查发现，对生成式 AI
+                的信任越高，受访者报告的批判性思考往往越少。研究也发现，思考的重点转向了核验与整合输出。这是关于自述实践的证据，并不能证明认知能力发生了永久衰退。
+                <a
+                  class="citation"
+                  href="#note-thinking"
+                  aria-label="查看批判性思考研究注释"
+                  >[3]</a
+                >
+              </p>
+              <p class="counterpoint">
+                <strong>另一条路。</strong>
+                委托可以保持知情、有界限，也可以撤回。人们可以保留技能，检查决策的理由，并向真正有权改变结果的人提出申诉。制度层面的问题是：谁能拥有这些选项，谁又只能接受默认安排？
+              </p>
+            </div>
+            <blockquote class="chapter-pull">
+              如果我们无法真正拒绝，<br />
+              一个选择就不完全属于我们。
+            </blockquote>
+          </div>
+        </section>
+
+        <section
+          class="chapter irrelevance wrap"
+          id="irrelevance"
+          aria-labelledby="irrelevance-title"
+        >
+          <header class="chapter-heading">
+            <div class="chapter-meta">
+              <span class="eyebrow">第三幕 / 意义</span
+              ><span class="chapter-numeral" aria-hidden="true">III</span>
+            </div>
+            <h2 id="irrelevance-title">无用时代</h2>
+            <p class="chapter-subtitle">意义的危机</p>
+            <p class="chapter-question">
+              当我们的技能<br />
+              不再稀缺，<br />
+              我们是谁？
+            </p>
+            <a class="small-link" href="#becoming"
+              >下一幕：重塑时代 <span aria-hidden="true">↓</span></a
+            >
+          </header>
+          <div class="chapter-content">
+            <div class="vignette">
+              <p class="eyebrow">想象这样一个场景</p>
+              <p>
+                三十年来，人们把别人解决不了的问题带到他面前。如今，公司按分钟购买同样的专业能力。城市更富裕了，他的生活也有保障。晚餐时，有人问他是做什么的。
+              </p>
+              <p>他从未觉得，这个问题如此难以回答。</p>
+            </div>
+            <div class="prose">
+              <h3>一项任务不再需要你，不等于你作为人不再重要。</h3>
+              <p>
+                工作能够提供收入、生活节奏、同伴关系，以及获得认可的依据。失去一个角色，即使收入得到保障，也可能动摇这四者。但它们是不同的损失，没有哪一种足以证明，一个人已经没有价值。
+              </p>
+              <p>
+                “无用时代”说的是一种恐惧，而不是对人的价值下判决。社会可能把市场需求与人的尊严混为一谈。当稀缺技能变得普遍，这种混淆便暴露出来：我们尊重的，究竟是这个人，还是他的能力所能换来的价格？
+              </p>
+              <p>
+                四个问题必须分开：哪些任务会改变？谁获得收益？社会地位会怎样变化？人们在哪里寻找归属？国际劳工组织
+                2025 年的职业暴露研究认为，生成式 AI
+                更可能重塑工作，而不是整体替代工作。“暴露程度”衡量的是潜在影响，并不是已经失去的岗位数量。
+                <a
+                  class="citation"
+                  href="#note-work"
+                  aria-label="查看就业研究注释"
+                  >[4]</a
+                >
+              </p>
+              <h3>谁的丰裕？</h3>
+              <p>
+                认知劳动变便宜，并不意味着所有权、能源、土地与政治权力会被平等分享。生产力极高的经济，仍可能让许多人缺少安全感。如果只有系统的拥有者才有余裕，自我重塑就会沦为空洞的承诺。
+              </p>
+              <p>
+                也不是每个人一开始就把职业身份放在人生中心。照料、家庭、手艺、精神生活与社群责任，早已在许多地方构成意义的来源。冲击会随制度与文化而不同；一个失去位置的专业人士，不能代表整个人类。
+              </p>
+              <p class="counterpoint">
+                <strong>另一条路。</strong>
+                新的工作可能出现，既有角色也可能拓展。分享收益、缩短工时、承认无偿贡献，可以减轻尊严对就业的依附。但这些安排，没有哪一种会由技术能力自动带来。
+              </p>
+            </div>
+            <blockquote class="chapter-pull">
+              如果不再需要证明自己有用，<br />
+              什么才值得我们付出时间？
+            </blockquote>
+          </div>
+        </section>
+
+        <section
+          class="chapter becoming wrap"
+          id="becoming"
+          aria-labelledby="becoming-title"
+        >
+          <header class="chapter-heading">
+            <div class="chapter-meta">
+              <span class="eyebrow">第四幕 / 重塑</span
+              ><span class="chapter-numeral" aria-hidden="true">IV</span>
+            </div>
+            <h2 id="becoming-title">重塑时代</h2>
+            <p class="chapter-subtitle">人类的自我重塑</p>
+            <p class="chapter-question">
+              我们将<br />
+              成为什么？
+            </p>
+            <svg class="becoming-art" viewbox="0 0 240 180" aria-hidden="true">
+              <path
+                d="M120 170V88C120 22 178 7 222 10c0 67-42 94-102 78C120 29 60 17 18 25c0 61 44 83 102 63"
+              />
+              <path d="M55 170h130M120 88l58-43M120 88L58 51" /></svg
+            ><a class="small-link" href="#afterword"
+              >继续阅读后记 <span aria-hidden="true">↓</span></a
+            >
+          </header>
+          <div class="chapter-content">
+            <div class="vignette">
+              <p class="eyebrow">想象这样一个场景</p>
+              <p>
+                一个孩子看着机器照料整座城市。她问祖父，人是做什么用的。他差点说出自己从前的职业名称。最后，他们只是又坐了一会儿。
+              </p>
+              <p>这一次，没有答案，竟像是一个开始。</p>
+            </div>
+            <div class="prose">
+              <h3>人的一生，不只是某种竞争优势</h3>
+              <p>
+                如果智力不再以我们预想的方式让人类与众不同，我们可以继续寻找最后一项机器做不到的任务。也可以问：人的价值，为什么必须取决于赢下这场比赛？
+              </p>
+              <p>
+                一起吃一顿饭，守住一个承诺，陪伴一个孩子度过悲伤：这些事的意义，不必来自表现更优。为另一个人在场，是一种关系，而不是宣称没有任何系统能够生成相似的外在结果。
+              </p>
+              <p>
+                这是关于价值的主张，不是技术能够证明的发现。不同社群可能选择截然不同的未来：为照料与创造留出更多时间，有意限制自动化，或与智能工具更紧密地结合。科学进步可以拓展这些可能，却不能替我们决定应当怎样生活。
+              </p>
+              <h3>另一种可能</h3>
+              <p>
+                还有一条更幽暗的分支：
+                <em>他者</em
+                >。人们也许会生活在一种自己无法理解、无法质疑，也无法真正治理的文明之中。舒适的日常，可以与共同塑造文明的能力严重流失同时存在。
+              </p>
+              <p>
+                回应这种风险，不能只靠劝个人找个爱好，或重新寻找人生目标。它需要制度，让人们能够决定建造什么、由谁受益，以及哪些决定必须持续接受公众质疑。
+              </p>
+              <p class="counterpoint">
+                <strong>另一条路。</strong>
+                重塑可以是多元的，也可以由人们共同参与。物质保障、知识获取与真实的政治发言权，会让更多人有机会参与塑造未来。缺少这些条件，别人就可能替我们定义未来。
+              </p>
+              <p>
+                因此，第四个时代没有一幅已经完成的肖像。它的开放性，正是重点。问题在于：我们能否拥有成为其作者的自由，也承担相应的责任？
+              </p>
+            </div>
+            <blockquote class="chapter-pull">
+              即使没有什么需要超越，<br />
+              什么仍让人生值得一过？
+            </blockquote>
+          </div>
+        </section>
+      </article>
+
+      <section
+        class="afterword"
+        id="afterword"
+        aria-labelledby="afterword-title"
+      >
+        <div class="wrap">
+          <div class="afterword-top">
+            <p class="eyebrow">第四个时代之后</p>
+            <span aria-hidden="true">✳</span>
+          </div>
+          <h2 id="afterword-title">
+            AI 的未来，<br />
+            也是关于 <em>人的价值的追问。</em>
+          </h2>
+          <p class="afterword-lead">
+            AI
+            对人类最深刻的改变，或许不在于替代我们所做的事，而在于迫使我们重新思考：为什么我们珍视做这些事。
+          </p>
+          <div class="afterword-bottom">
+            <p>
+              所有权、教育、照料与公共权力的选择，将共同塑造那个未来。重塑是一种需要我们一起为之创造空间的可能。
+            </p>
+            <a href="#thesis">回到开篇 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="companion wrap" id="notes" aria-labelledby="notes-title">
+        <div class="companion-heading">
+          <p class="eyebrow">文章背后</p>
+          <h2 id="notes-title">
+            技术机制。<br />
+            <em>研究依据。</em>
+          </h2>
+          <p>技术帮助解释压力从何而来，却不能决定人的未来。</p>
+          <p class="fine-text">
+            研究注释与论证边界。<br />
+            展开任意一项，继续阅读。
+          </p>
+        </div>
+        <div class="notes-list">
+          <details id="note-models">
+            <summary>
+              <span class="note-number">01</span
+              ><span>机器如何学会模仿<small>技术基础</small></span
+              ><span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>
+                Transformer
+                通过注意力机制建模序列中的关系。其可并行训练的架构，为现代语言模型奠定了技术基础之一。生成令人信服的语言，本身并不能回答主观体验是否存在的问题。
+              </p>
+              <p>
+                让这些系统走向实用，还涉及硬件与内存。FlashAttention
+                通过分块计算注意力，减少 GPU
+                不同层级内存之间的数据传输。计算更快会改变成本与可及性，却不会决定系统由谁拥有、为谁带来收益。
+              </p>
+              <a href="https://arxiv.org/abs/1706.03762"
+                >Vaswani 等 · Attention Is All You Need（2017）↗</a
+              ><a href="https://arxiv.org/abs/2205.14135"
+                >Dao 等 · FlashAttention（2022）↗</a
+              >
+            </div>
+          </details>
+          <details id="note-agents">
+            <summary>
+              <span class="note-number">02</span
+              ><span>从回答到行动<small>技术基础</small></span
+              ><span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>
+                ReAct
+                探索将推理过程与行动交替进行，其中也包括与外部环境的交互。这为模型从生成文本走向使用工具，提供了一种具体机制。
+              </p>
+              <p>
+                我们的设计推论是：一旦工具能够行动，权限、复核节点与撤回行动的能力就变得重要。本地运行或云端运行，会改变数据与计算所在的位置；但无论哪一种，都不会自动保证用户拥有控制权。
+              </p>
+              <a href="https://arxiv.org/abs/2210.03629"
+                >Yao 等 · ReAct（2022 年预印本；ICLR 2023）↗</a
+              >
+            </div>
+          </details>
+          <details id="note-thinking">
+            <summary>
+              <span class="note-number">03</span
+              ><span
+                >委托与批判性思考<small>实证研究 · 注意结论边界</small></span
+              ><span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>
+                Lee 及其合作者调查了 319 名知识工作者使用生成式 AI 的情况。对 AI
+                更有信心，与较少的自述批判性思考相关；受访者也将核验和整合视为工作的重要部分。
+              </p>
+              <p>
+                这项自述调查并不能证明，AI
+                会导致技能长期退化。“让渡时代”是在推演一种可能的制度风险，不应被理解为该研究已经证实的结论。
+              </p>
+              <a
+                href="https://www.microsoft.com/en-us/research/publication/the-impact-of-generative-ai-on-critical-thinking-self-reported-reductions-in-cognitive-effort-and-confidence-effects-from-a-survey-of-knowledge-workers/"
+                >Lee 等 · 生成式 AI 对批判性思考的影响（CHI 2025）↗</a
+              >
+            </div>
+          </details>
+          <details id="note-work">
+            <summary>
+              <span class="note-number">04</span
+              ><span
+                >职业暴露不等于失业<small>劳动研究 · 影响并不均匀</small></span
+              ><span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>
+                国际劳工组织修订后的全球指数，通过任务层面的评估研究职业对生成式
+                AI
+                的暴露程度。作者强调，工作重塑是更可能出现的影响，因为多数职业仍包含需要人参与的任务。暴露程度也会因经济体和群体而异。
+              </p>
+              <p>
+                这提醒我们，对大规模替代的笼统判断需要谨慎。它并不证明，岗位流失不会造成伤害、新工作会迅速出现，或收益会得到分享。
+              </p>
+              <a
+                href="https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure"
+                >Gmyrek 等 · 生成式 AI 与就业（国际劳工组织，2025）↗</a
+              >
+            </div>
+          </details>
+          <details id="note-editorial">
+            <summary>
+              <span class="note-number">05</span
+              ><span>如何阅读这套框架<small>写作方法与项目说明</small></span
+              ><span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>
+                “四个时代”是一套推演性的人类学框架，而不是经由实证确立的历史顺序。各章开头的场景均为虚构。关于尊严、拒绝权与共同塑造未来的论述，属于伦理主张。所引研究支持的是有限的技术或经验性判断，并不能验证整套框架。
+              </p>
+              <p>
+                这是一个独立项目，通过以人为中心的论述与原版海报，探索四个时代。海报中的年代与概括性表述，应被视为情境设想。本文有意为多种未来保留空间。
+              </p>
+              <a
+                href="assets/four-ages-poster.png"
+                download="the-four-ages-of-ai.png"
+                >下载英文原版海报 ↓</a
+              >
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer wrap">
+      <a class="brand" href="#top"
+        ><span class="brand-mark" aria-hidden="true">iv.</span
+        ><span
+          >人工智能的<br />
+          四个时代</span
+        ></a
+      >
+      <p>
+        一个独立项目。<br />
+        持续追问，何以为人。
+      </p>
+      <div>
+        <a href="index.html" lang="en" hreflang="en" data-language-switch
+          >English</a
+        >
+        <a href="#notes">来源与注释</a
+        ><button class="text-button" type="button" id="print-essay" hidden>
+          打印文章 <span aria-hidden="true">↗</span></button
+        ><a href="#top">回到顶部 ↑</a>
+      </div>
+    </footer>
+
+    <dialog id="poster-dialog" aria-labelledby="poster-dialog-title">
+      <div class="dialog-toolbar">
+        <h2 id="poster-dialog-title">
+          人工智能的四个时代 <span>—— 英文原版海报</span>
+        </h2>
+        <div>
+          <button type="button" id="poster-zoom" aria-pressed="false">
+            放大 +</button
+          ><a href="assets/four-ages-poster.png" target="_blank" rel="noopener"
+            >查看原图 ↗</a
+          ><button type="button" id="poster-close" aria-label="关闭海报">
+            关闭 ×
+          </button>
+        </div>
+      </div>
+      <div
+        class="poster-viewport"
+        tabindex="0"
+        aria-label="海报图片；放大后可以滚动浏览"
+      >
+        <img
+          src="assets/four-ages-poster.png"
+          width="1536"
+          height="1024"
+          alt="英文原版海报，呈现四个时代，以及关于真实、自主、意义与重塑的问题。"
+        />
+      </div>
+      <p class="dialog-caption">
+        这里呈现的是情境设想，并非预测。放大可浏览海报细节，也可以打开原始图片。
+      </p>
+    </dialog>
+  </body>
+</html>
