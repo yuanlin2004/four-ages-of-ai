@@ -50,7 +50,7 @@ THIRD_PARTY.md             Font attribution and asset provenance
 
 ## Editing
 
-Edit the English essay in `index.html` and its Chinese counterpart in `zh.html`. Shared styles and interactions live in `styles.css` and `script.js`. Keep corresponding section IDs the same so language switching retains the current chapter. The five expandable research notes distinguish technical foundations, empirical findings, and interpretation. All four opening scenes are explicitly fictional, and the dates in the artwork are treated as scenario labels.
+Edit the English essay in `index.html` and its Chinese counterpart in `zh.html`. Shared styles and interactions live in `styles.css` and `script.js`. Keep corresponding section IDs the same so language switching retains the current chapter. The seven expandable research notes distinguish technical foundations, empirical findings, and interpretation. All four opening scenes are explicitly fictional, and the dates in the artwork are treated as scenario labels.
 
 Change the paper, ink, and four chapter colors in the `:root` variables at the top of `styles.css`. The layout adapts to small screens; the chapter strip stays available while reading. The poster is never cropped, and its viewer supports keyboard dismissal, zoom, a full-resolution link, and a direct download.
 
