@@ -623,6 +623,52 @@ figcaption > a {
   color: var(--age);
   font-weight: 600;
 }
+/* Black Mirror parallels: a dark pane, like a switched-off screen. */
+.prose .screen-note {
+  margin: 30px 0;
+  padding: 26px 30px 28px;
+  background: #1f221e;
+  color: #e6e3da;
+  border-top: 3px solid var(--age);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.8;
+}
+.screen-note .eyebrow {
+  color: #a9a699;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.prose .screen-note .screen-title {
+  color: #fbfaf6;
+  font: 25px/1.3 var(--serif);
+  margin-bottom: 14px;
+}
+.prose .screen-note p {
+  margin-bottom: 0;
+}
+.prose .screen-note p + p:not(.screen-title) {
+  margin-top: 12px;
+}
+html:lang(zh) .screen-note {
+  line-height: 2;
+}
+html:lang(zh) .prose .screen-note .screen-title {
+  font-size: 21px;
+  line-height: 1.6;
+}
+@media print {
+  .prose .screen-note {
+    background: none;
+    color: black;
+    border: 1px solid #999;
+    border-top: 3px solid black;
+  }
+  .screen-note .eyebrow,
+  .prose .screen-note .screen-title {
+    color: black;
+  }
+}
 .chapter-pull {
   color: var(--age);
   font: clamp(31px, 3.1vw, 42px) / 1.16 var(--serif);
@@ -1841,6 +1887,7 @@ html:lang(zh) .thesis-body > div {
   html:lang(zh) .thesis-body > div,
   .reading-note p,
   .prose .counterpoint,
+  .prose .screen-note,
   .afterword-bottom p,
   .companion-heading > p:not(.eyebrow),
   .note-body,
