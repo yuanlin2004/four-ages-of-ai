@@ -2433,3 +2433,42 @@ html:lang(zh) .thesis-body > div {
     gap: 8px 14px;
   }
 }
+
+/* Full song lyrics: preserve stanza rhythm with comfortable reading sizes. */
+.lyrics {
+  padding-block: 64px 56px;
+}
+.lyrics-heading,
+.lyrics-text {
+  max-width: 46rem;
+  margin-inline: auto;
+}
+.lyrics-heading {
+  border-top: 1px solid var(--line);
+  padding-top: 32px;
+  margin-bottom: 40px;
+}
+.lyrics-heading h2 {
+  font: 42px/1.2 var(--serif);
+  margin: 0 0 12px;
+}
+.lyrics-heading p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+.lyrics-text {
+  font-size: 20px;
+  line-height: 1.85;
+  overflow-wrap: break-word;
+}
+.lyrics-text p {
+  margin: 0 0 2em;
+}
+@media (max-width: 600px) {
+  .lyrics {
+    padding-block: 40px 24px;
+  }
+  .lyrics-text {
+    font-size: 18px;
+  }
+}
