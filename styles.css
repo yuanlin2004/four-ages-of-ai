@@ -833,6 +833,55 @@ html:lang(zh) .prose .flowchart .flow-title {
     box-shadow: none;
   }
 }
+/* Spoiler folding for the fiction parallels (added by script.js). */
+.spoiler-controls {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 20px;
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.4;
+}
+.spoiler-body {
+  margin-top: 16px;
+}
+.spoiler-toggle {
+  padding: 7px 14px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.spoiler-toggle:hover {
+  color: var(--age);
+}
+.screen-note .spoiler-toggle:hover {
+  color: #fbfaf6;
+  background: rgba(255, 255, 255, 0.08);
+}
+.spoiler-always {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.spoiler-always input {
+  accent-color: var(--age);
+  margin: 0;
+}
+@media print {
+  .spoiler-controls {
+    display: none;
+  }
+  .spoiler-body[hidden] {
+    display: block;
+  }
+}
 .chapter-pull {
   color: var(--age);
   font: clamp(31px, 3.1vw, 42px) / 1.16 var(--serif);

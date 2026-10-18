@@ -116,6 +116,74 @@
     }, { once: true });
   });
 
+  // Fiction parallels describe plots, so each one stays folded, title included, until the reader opens it.
+  const spoilerText = isChinese
+    ? { show: "显示剧透", hide: "收起剧透", always: "始终显示剧透" }
+    : { show: "Show spoilers", hide: "Hide spoilers", always: "Always show spoilers" };
+  const spoilerKey = "four-ages-show-spoilers";
+  function readSpoilerPreference() {
+    try {
+      return localStorage.getItem(spoilerKey) === "1";
+    } catch {
+      return false;
+    }
+  }
+  function saveSpoilerPreference(value) {
+    try {
+      if (value) localStorage.setItem(spoilerKey, "1");
+      else localStorage.removeItem(spoilerKey);
+    } catch {}
+  }
+  const spoilers = [];
+  function setSpoilerOpen(spoiler, open) {
+    spoiler.body.hidden = !open;
+    spoiler.toggle.setAttribute("aria-expanded", String(open));
+    spoiler.toggle.textContent = open ? spoilerText.hide : spoilerText.show;
+    spoiler.panel.classList.toggle("spoiler-closed", !open);
+  }
+  function setAllSpoilers(open) {
+    spoilers.forEach((spoiler) => {
+      spoiler.always.checked = open;
+      setSpoilerOpen(spoiler, open);
+    });
+  }
+  document
+    .querySelectorAll(".prose .screen-note, .prose .flowchart")
+    .forEach((panel, index) => {
+      const label = panel.querySelector(".eyebrow");
+      if (!label) return;
+      const body = document.createElement("div");
+      body.className = "spoiler-body";
+      body.id = `spoiler-${index + 1}`;
+      while (label.nextSibling) body.append(label.nextSibling);
+      const controls = document.createElement("div");
+      controls.className = "spoiler-controls";
+      const toggle = document.createElement("button");
+      toggle.type = "button";
+      toggle.className = "spoiler-toggle";
+      toggle.setAttribute("aria-controls", body.id);
+      const alwaysLabel = document.createElement("label");
+      alwaysLabel.className = "spoiler-always";
+      const always = document.createElement("input");
+      always.type = "checkbox";
+      alwaysLabel.append(always, ` ${spoilerText.always}`);
+      controls.append(toggle, alwaysLabel);
+      label.after(controls, body);
+      const spoiler = { panel, body, toggle, always };
+      spoilers.push(spoiler);
+      toggle.addEventListener("click", () =>
+        setSpoilerOpen(spoiler, body.hidden),
+      );
+      always.addEventListener("change", () => {
+        saveSpoilerPreference(always.checked);
+        setAllSpoilers(always.checked);
+      });
+    });
+  setAllSpoilers(readSpoilerPreference());
+  window.addEventListener("storage", (event) => {
+    if (event.key === spoilerKey) setAllSpoilers(event.newValue === "1");
+  });
+
   const printButton = document.querySelector("#print-essay");
   printButton.hidden = false;
   printButton.addEventListener("click", () => window.print());
