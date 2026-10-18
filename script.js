@@ -116,7 +116,7 @@
     }, { once: true });
   });
 
-  // Fiction parallels describe plots, so each one stays folded until the reader opens it.
+  // Fiction parallels describe plots, so each one stays folded, title included, until the reader opens it.
   const spoilerText = isChinese
     ? { show: "显示剧透", hide: "收起剧透", always: "始终显示剧透" }
     : { show: "Show spoilers", hide: "Hide spoilers", always: "Always show spoilers" };
@@ -150,25 +150,25 @@
   document
     .querySelectorAll(".prose .screen-note, .prose .flowchart")
     .forEach((panel, index) => {
-      const title = panel.querySelector(".screen-title, .flow-title");
-      if (!title) return;
+      const label = panel.querySelector(".eyebrow");
+      if (!label) return;
       const body = document.createElement("div");
       body.className = "spoiler-body";
       body.id = `spoiler-${index + 1}`;
-      while (title.nextSibling) body.append(title.nextSibling);
+      while (label.nextSibling) body.append(label.nextSibling);
       const controls = document.createElement("div");
       controls.className = "spoiler-controls";
       const toggle = document.createElement("button");
       toggle.type = "button";
       toggle.className = "spoiler-toggle";
       toggle.setAttribute("aria-controls", body.id);
-      const label = document.createElement("label");
-      label.className = "spoiler-always";
+      const alwaysLabel = document.createElement("label");
+      alwaysLabel.className = "spoiler-always";
       const always = document.createElement("input");
       always.type = "checkbox";
-      label.append(always, ` ${spoilerText.always}`);
-      controls.append(toggle, label);
-      title.after(controls, body);
+      alwaysLabel.append(always, ` ${spoilerText.always}`);
+      controls.append(toggle, alwaysLabel);
+      label.after(controls, body);
       const spoiler = { panel, body, toggle, always };
       spoilers.push(spoiler);
       toggle.addEventListener("click", () =>

@@ -835,6 +835,7 @@ html:lang(zh) .prose .flowchart .flow-title {
 }
 /* Spoiler folding for the fiction parallels (added by script.js). */
 .spoiler-controls {
+  margin-top: 14px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
